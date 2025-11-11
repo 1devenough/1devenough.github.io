@@ -1,0 +1,12 @@
+# _config.yml
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+remote_theme: "mmistakes/minimal-mistakes"
+ 
+title: 1인 개발자 포털
+description: 1인 개발을 위한 모든 것
