@@ -1,0 +1,13 @@
+# _data/navigation.yml
+
+main:
+  - title: "소개"
+    url: /about/
+  - title: "코딩"
+    url: /coding/
+  - title: "디자인"
+    url: /design/
+  - title: "마케팅"
+    url: /marketing/
+  - title: "모든 글"
+    url: /posts/

@@ -1,0 +1,8 @@
+---
+# 이 YAML Front Matter는 SASS 처리를 위해 필수입니다.
+---
+
+@import "minimal-mistakes/skins/default"; // 또는 사용 중인 스킨
+@import "minimal-mistakes"; // 테마 기본 스타일
+
+@import "custom"; // <-- ★★★ 이 줄이 핵심입니다

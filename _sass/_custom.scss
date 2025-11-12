@@ -1,0 +1,69 @@
+/* Splash 레이아웃의 Hero 영역을 일반 텍스트처럼 보이게 수정 */
+.layout--splash .page__hero--overlay {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.layout--splash .page__hero--overlay .page__title,
+.layout--splash .page__hero--overlay .page__lead {
+  color: inherit; /* 기본 텍스트 색상 상속 */
+  text-shadow: none; /* 텍스트 그림자(엠보싱 효과) 제거 */
+}
+
+/* 기존 Page Hero 중앙 정렬 스타일 */
+.page__hero--overlay .wrapper {
+  text-align: center;
+}
+
+.page__hero--overlay .page__lead {
+  margin: 0 auto;
+}
+
+/* Featrue Row */
+
+/* 카드 전체 스타일 */
+.feature__item {
+  background-color: #F9FAFB;
+  border: 1px solid #E8EAED;
+  padding: 23px;
+  border-radius: 8px;
+  display: flex; /* 내부 아이템이 높이를 꽉 채우도록 설정 */
+  flex-direction: column;
+}
+
+/* 카드 내부의 실제 컨텐츠 영역 */
+.feature__item .archive__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* 카드의 남는 공간을 모두 차지하여 높이를 통일 */
+}
+
+.feature__item img {
+  max-width: 48px !important;
+  height: auto !important; /* 가로세로 비율 유지를 위해 추가 */
+  margin-bottom: 1em; /* 아이콘과 제목 사이 여백 추가 */
+}
+
+/* 제목(h2) 위쪽 여백 제거 */
+.feature__item .archive__item-title {
+  margin-top: 0;
+}
+
+.feature__item .btn {
+  background-color: #D5EDE0;
+  color: #48BB78;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* 버튼을 감싸는 <p> 태그를 아래로 밀어냄 */
+.feature__item .archive__item p:has(> .btn) {
+  margin-top: auto;
+  margin-bottom: 0; /* p 태그의 기본 여백 제거 */
+}
