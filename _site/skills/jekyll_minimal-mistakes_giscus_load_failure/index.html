@@ -1,0 +1,57 @@
+<h2 id="-문제-problem--핵심-core">📌 문제 (Problem) / 핵심 (Core)</h2>
+<p>Jekyll Minimal Mistakes 테마에서 Giscus 댓글을 연동할 때, 아래 조건을 모두 만족했음에도 불구하고 “COMMENTS” 섹션 아래에 Giscus 댓글 창이 로드되지 않고 빈 화면만 표시됩니다.</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code>에 <code class="language-plaintext highlighter-rouge">comments: provider: giscus</code> 및 <code class="language-plaintext highlighter-rouge">repo</code>, <code class="language-plaintext highlighter-rouge">repo_id</code> 등 모든 Giscus 설정이 올바르게 기재되어 있습니다.</li>
+  <li>GitHub 저장소에 Giscus 앱 설치 및 Discussions 기능 활성화 등 모든 백엔드 설정을 완료했습니다.</li>
+  <li>포스트(<code class="language-plaintext highlighter-rouge">*.md</code>)의 YAML Front Matter에 <code class="language-plaintext highlighter-rouge">comments: true</code>가 설정되어 있습니다.</li>
+  <li>브라우저 개발자 도구 Network 탭에서 Giscus 요청이 <code class="language-plaintext highlighter-rouge">Status Code: 200 OK</code>로 성공합니다.</li>
+</ol>
+
+<h2 id="-원인--맥락-context">💡 원인 / 맥락 (Context)</h2>
+<p>이 ‘고스트 버그’는 테마가 <code class="language-plaintext highlighter-rouge">_config.yml</code>을 읽어 Giscus 스크립트 태그를 <em>자동으로 생성</em>하는 내부 로직에서 알 수 없는 이유로 <strong>조용히 실패(fail silently)</strong>하기 때문에 발생합니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">layout: single</code>은 <code class="language-plaintext highlighter-rouge">comments: true</code> 플래그와 <code class="language-plaintext highlighter-rouge">_config.yml</code>의 <code class="language-plaintext highlighter-rouge">provider: giscus</code>를 보고 <strong>테마의 내장 댓글 로직</strong>을 실행하려 하지만, 이 로직이 실패하면서 Giscus가 로드되지 않습니다.</p>
+
+<h2 id="-해결책--지침-solution--rule">✅ 해결책 / 지침 (Solution / Rule)</h2>
+<p>테마의 내장 로직을 우회하는 <strong>‘하이브리드’ 방식</strong>을 사용합니다. <code class="language-plaintext highlighter-rouge">_config.yml</code> 설정은 유지하되, 테마의 기본 <code class="language-plaintext highlighter-rouge">comments.html</code> 파일을 <strong>우리가 만든 커스텀 파일로 덮어쓰기(override)</strong>하여 Giscus 스크립트를 수동으로 삽입합니다.</p>
+
+<ol>
+  <li><strong><code class="language-plaintext highlighter-rouge">_config.yml</code> 유지:</strong> <code class="language-plaintext highlighter-rouge">comments:</code> 블록(<code class="language-plaintext highlighter-rouge">provider: giscus</code> 및 모든 <code class="language-plaintext highlighter-rouge">repo</code> 정보 포함)을 <code class="language-plaintext highlighter-rouge">_config.yml</code>에 <strong>그대로 유지합니다</strong>. 이 설정이 있어야 <code class="language-plaintext highlighter-rouge">layout: single</code>이 댓글 로드를 시도합니다.</li>
+  <li><strong>포스트 <code class="language-plaintext highlighter-rouge">comments: true</code> 유지:</strong> 댓글을 표시할 포스트(<code class="language-plaintext highlighter-rouge">*.md</code>)에 <code class="language-plaintext highlighter-rouge">comments: true</code> 플래그를 <strong>반드시 유지합니다</strong>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_includes/comments.html</code> 커스텀 생성:</strong>
+<code class="language-plaintext highlighter-rouge">_includes</code> 폴더에 <code class="language-plaintext highlighter-rouge">comments.html</code> 파일을 <strong>직접 생성</strong>합니다. (Minimal Mistakes 테마의 기본 파일을 덮어쓰게 됩니다.)</li>
+  <li>
+    <p><strong>Giscus 스크립트 하드코딩:</strong> 생성한 <code class="language-plaintext highlighter-rouge">_includes/comments.html</code> 파일에 <code class="language-plaintext highlighter-rouge">_config.yml</code>의 값을 참조하여 Giscus 스크립트 태그 전체를 다음과 같이 직접 붙여넣습니다:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"comments-section"</span> <span class="na">style=</span><span class="s">"margin-top: 2em;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"[https://giscus.app/client.js](https://giscus.app/client.js)"</span>
+              
+          <span class="na">data-repo=</span><span class="s">"[Your-User]/[Your-Repo]"</span>
+          <span class="na">data-repo-id=</span><span class="s">"[Your-Repo-ID]"</span>
+          <span class="na">data-category=</span><span class="s">"[Your-Category-Name]"</span>
+          <span class="na">data-category-id=</span><span class="s">"[Your-Category-ID]"</span>
+              
+          <span class="na">data-mapping=</span><span class="s">"pathname"</span>
+          <span class="na">data-strict=</span><span class="s">"0"</span>
+          <span class="na">data-reactions-enabled=</span><span class="s">"1"</span>
+          <span class="na">data-emit-metadata=</span><span class="s">"0"</span>
+          <span class="na">data-input-position=</span><span class="s">"bottom"</span>
+          <span class="na">data-theme=</span><span class="s">"preferred_color_scheme"</span>
+          <span class="na">data-lang=</span><span class="s">"ko"</span>
+          <span class="na">crossorigin=</span><span class="s">"anonymous"</span>
+          <span class="na">async</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">.md</code> 파일에 직접 include comments 기재하지 않는다:</strong> 포스트 본문(<code class="language-plaintext highlighter-rouge">*.md</code>)에는 `&lt;div class="comments-section" style="margin-top: 2em;"&gt;</p>
+
+    <script src="https://giscus.app/client.js" data-repo="1devenough/1devenough_comments" data-repo-id="R_kgDOQVx8FQ" data-category="Comments" data-category-id="DIC_kwDOQVx8Fc4Cxyzu" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" crossorigin="anonymous" async="">
+</script>
+  </li>
+</ol>
+
+<p>&lt;/div&gt;
+` 태그를 ** 추가하지 않습니다**. <code class="language-plaintext highlighter-rouge">layout: single</code>이 <code class="language-plaintext highlighter-rouge">comments: true</code> 플래그를 보고 자동으로 이 파일을 삽입해 줍니다.</p>
