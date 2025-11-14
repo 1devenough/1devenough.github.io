@@ -23,15 +23,12 @@ permalink: /:categories/:title/
 comments:
   provider: "giscus" # 댓글 공급자로 giscus 사용
   giscus:
-    # San님이 제공한 스크립트의 data-* 속성을 기반으로 설정
-    repo: "1devenough/1devenough.github.io"
-    repo_id: "R_kgDOQTrPTQ"
-    category: "General"
-    category_id: "DIC_kwDOQTrPTc4CxyH6"
-    mapping: "pathname" # URL 경로(pathname) 기준으로 토론 매핑
-    strict: "0"
-    reactions_enabled: "1"
-    emit_metadata: "0"
-    input_position: "bottom"
-    theme: "preferred_color_scheme" # 사용자의 다크/라이트 모드 테마 선호도 따름
-    lang: "ko"
+    repo: 1devenough/1devenough.github.io   # data-repo
+    repo_id: R_kgDOQTrPTQ                   # data-repo-id
+    category: Giscus                        # data-category
+    category_id: DIC_kwDOQTrPTc4Cxyv5       # data-category-id
+    mapping:                                # data-mapping(디폴트값과 동일하여 비워둠)
+    strict:                                 # data-strict (디폴트값과 동일하여 비워둠)
+    input_position:                         # data-input-position   (디폴트값과 동일하여 비워둠)
+    lang: ko                                # data-lang             (디폴트값은 `site.lang`) 
+    reactions_enabled: 0                    # data-reactions-enabled(디폴트값은 1)
