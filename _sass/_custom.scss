@@ -67,3 +67,251 @@
   margin-top: auto;
   margin-bottom: 0; /* p 태그의 기본 여백 제거 */
 }
+
+/* --- Content Hub Tabs (CSS-Only) --- */
+
+/* 탭 전체 래퍼 */
+.content-hub-tabs {
+  border: 1px solid #E8EAED;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* 탭 링크(label) 영역 */
+.content-hub-tabs .tab-links {
+  display: flex;
+  flex-wrap: wrap; /* 모바일에서 탭이 여러 줄로 나뉠 수 있도록 함 */
+  background-color: #F9FAFB;
+  border-bottom: 1px solid #E8EAED;
+  padding: 0;
+  margin: 0;
+}
+
+/* 실제 탭 링크 (label) */
+.content-hub-tabs .tab-links label {
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #525252;
+  border-bottom: 3px solid transparent; /* 비활성 상태의 하단 테두리 */
+  margin-bottom: -1px; /* 하단 테두리와의 경계를 맞춤 */
+  transition: all 0.2s ease-in-out;
+  list-style: none;
+  display: inline-block;
+}
+
+/* 탭 호버 시 */
+.content-hub-tabs .tab-links label:hover {
+  background-color: #f0f0f0;
+}
+
+/* 탭 콘텐츠 영역 (pane) */
+.content-hub-tabs .tab-pane {
+  padding: 1.5em;
+  display: none; /* 모든 탭 콘텐츠를 기본적으로 숨김 */
+}
+
+/* * CSS-Only 로직:
+ * 1. 라디오 버튼(input)은 숨김
+ * 2. 라벨(label)을 클릭하면 연결된 라디오 버튼이 :checked 상태가 됨
+ * 3. :checked 된 라디오 버튼의 형제(~) 요소인 .tab-pane을 display: block으로 보여줌
+ */
+.content-hub-tabs input[type="radio"] {
+  display: none; /* 라디오 버튼 숨기기 */
+}
+
+/* 활성 탭(label) 스타일 (수정됨) */
+/* * input이 check되면(예: #tab-ctrl-1:checked),
+ * 그것의 형제(~)인 .tab-links 내부의(>)
+ * 해당 input을 가리키는 label(예: label[for="tab-ctrl-1"])을 선택합니다.
+ */
+#tab-ctrl-1:checked ~ .tab-links label[for="tab-ctrl-1"],
+#tab-ctrl-2:checked ~ .tab-links label[for="tab-ctrl-2"],
+#tab-ctrl-3:checked ~ .tab-links label[for="tab-ctrl-3"],
+#tab-ctrl-4:checked ~ .tab-links label[for="tab-ctrl-4"],
+#tab-ctrl-5:checked ~ .tab-links label[for="tab-ctrl-5"] {
+  color: #000;
+  border-bottom: 3px solid #48BB78; /* 활성 탭의 녹색 하단 테두리 */
+}
+
+/* 활성 탭 콘텐츠(pane) 표시 */
+#tab-ctrl-1:checked ~ .tab-content #tab-pane-1,
+#tab-ctrl-2:checked ~ .tab-content #tab-pane-2,
+#tab-ctrl-3:checked ~ .tab-content #tab-pane-3,
+#tab-ctrl-4:checked ~ .tab-content #tab-pane-4,
+#tab-ctrl-5:checked ~ .tab-content #tab-pane-5 {
+  display: block;
+}
+
+/* Content Hub Tab Icons */
+.tab-icon-article  { color: #007bff; }  /* 예: 아티클 (파란색) */
+.tab-icon-slide    { color: #d9534f; }  /* 예: 슬라이드 (빨간색) */
+.tab-icon-audio    { color: #5bc0de; }  /* 예: 오디오 (하늘색) */
+.tab-icon-quiz     { color: #f0ad4e; }  /* 예: 퀴즈 (노란색) */
+
+/* --- Quiz Widget Styles --- */
+
+/* 전체 래퍼 */
+.quiz-widget-container {
+  border: 1px solid #E8EAED;
+  border-radius: 8px;
+  padding: 1.5em;
+  background-color: #F9FAFB;
+}
+
+/* 헤더 (진행 상태) */
+.quiz-header {
+  text-align: right;
+  font-size: 0.9em;
+  color: #525252;
+  margin-bottom: 1em;
+}
+
+/* 문제 텍스트 */
+.quiz-question {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
+
+/* 힌트 */
+.quiz-hint {
+  margin-bottom: 1.5em;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #E8EAED;
+}
+.quiz-hint summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.8em 1.2em;
+}
+.quiz-hint-content {
+  padding: 0 1.2em 1em 1.2em;
+  color: #333;
+  border-top: 1px solid #E8EAED;
+  padding-top: 1em;
+  margin-top: 0.5em;
+}
+
+/* 선택지 목록 (ul) */
+.quiz-options {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em; /* 선택지 사이 간격 */
+}
+
+/* 선택지 상태 스타일 (li) */
+.quiz-option {
+  display: flex;
+  align-items: flex-start; /* 텍스트가 여러 줄일 경우 위쪽 정렬 */
+  background-color: #fff;
+  border: 1px solid #E8EAED;
+  padding: 1em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  flex-wrap: wrap;
+}
+.quiz-option:hover {
+  background-color: #fdfdfd;
+  border-color: #d0d0d0;
+}
+.quiz-option .option-letter {
+  font-weight: 600;
+  margin-right: 0.75em;
+  color: #333;
+}
+.quiz-option .option-text {
+  color: #333;
+  line-height: 1.5;
+}
+
+.quiz-option.correct {
+  background-color: #E6F7ED;
+  border-color: #A3D4B6;
+}
+.quiz-option.incorrect {
+  background-color: #F8F8F8;
+  border-color: #E0E0E0;
+  opacity: 0.8;
+}
+.quiz-option.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.quiz-option.disabled:hover {
+  background-color: #fff; /* 비활성화 시 호버 효과 제거 */
+  border-color: #E8EAED;
+}
+.quiz-option.incorrect.disabled {
+  opacity: 0.7;
+}
+.quiz-option.correct.disabled {
+  opacity: 1.0; // 정답 표시는 비활성화해도 선명하게
+}
+
+/* 인라인 피드백 스타일 (선택지 <li> 내부에 생성됨) */
+.quiz-inline-feedback {
+  /* 가로 너비 100%를 차지하여 강제로 줄바꿈되도록 함 */
+  flex-basis: 100%;
+  width: 100%;  
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* 구분선 */
+}
+.quiz-option.correct .quiz-inline-feedback {
+  border-top-color: #A3D4B6; /* 녹색 구분선 */
+}
+.quiz-option.incorrect .quiz-inline-feedback {
+  border-top-color: #E0E0E0; /* 회색 구분선 */
+}
+
+.quiz-inline-feedback .feedback-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+.quiz-inline-feedback .feedback-title .icon {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+}
+
+/* 정답/오답에 따른 아이콘 및 텍스트 색상 */
+.quiz-inline-feedback.correct .feedback-title {
+  color: #2E7D32; /* 진한 녹색 */
+}
+.quiz-inline-feedback.incorrect .feedback-title {
+  color: #C62828; /* 진한 붉은색 */
+}
+
+.quiz-inline-feedback .feedback-text {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 내비게이션 버튼 */
+.quiz-navigation {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+.quiz-navigation button {
+  padding: 0.75em 1.5em;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #E8EAED;
+  cursor: pointer;
+}
+.quiz-navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

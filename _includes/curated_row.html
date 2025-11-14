@@ -1,0 +1,17 @@
+<div class="curated-picks-row">
+    <h2 class="archive__subtitle">{{ page.curated_title | default: "Start Here" }}</h2>
+    <div class="archive">
+        {% for pick in page.curated_picks %}
+        <div class="archive__item">
+            <article class="archive__item-wrapper">
+                <h3 class="archive__item-title">
+                    <a href="{{ pick.url | relative_url }}">{{ pick.title }}</a>
+                </h3>
+                {% if pick.excerpt %}
+                <p class="archive__item-excerpt">{{ pick.excerpt }}</p>
+                {% endif %}
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+</div>

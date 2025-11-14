@@ -3,6 +3,8 @@
 main:
   - title: "소개"
     url: /about/
+  - title: "인사이트"
+    url: /insights/
   - title: "코딩"
     url: /coding/
   - title: "디자인"

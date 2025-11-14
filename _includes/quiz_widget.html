@@ -1,0 +1,191 @@
+{% comment %} 1. quiz_id를 기반으로 _data/quizzes/ 에서 YAML 데이터 로드 {% endcomment %}
+{% assign quiz = site.data.quizzes[include.quiz_id] %}
+
+{% if quiz %}
+<div class="quiz-widget-container" data-quiz-id="{{ include.quiz_id }}">
+
+    <div class="quiz-header">
+        <span class="quiz-progress"></span>
+    </div>
+
+    <div class="quiz-question"></div>
+
+    <details class="quiz-hint" style="display: none;">
+        <summary>Hint</summary>
+        <div class="quiz-hint-content"></div>
+    </details>
+
+    <ul class="quiz-options"></ul>
+
+    <div class="quiz-navigation">
+        <button class="quiz-prev" disabled>Previous</button>
+        <button class="quiz-next">Next</button>
+    </div>
+
+</div>
+
+<script type="application/json" data-quiz-json>
+    {{ quiz | jsonify }}
+</script>
+
+<script>
+  (function() {
+    // 1. 현재 스크립트 태그의 형제 요소들에서 퀴즈 데이터(JSON)와 셸(Container)을 찾습니다.
+    const jsonDataScript = document.currentScript.previousElementSibling;
+    const quizContainer = jsonDataScript.previousElementSibling;
+
+    if (!quizContainer || !quizContainer.classList.contains('quiz-widget-container') || !jsonDataScript.hasAttribute('data-quiz-json')) {
+      console.error("Quiz Widget: 필수 요소를 찾을 수 없습니다.");
+      return;
+    }
+
+    // 2. 데이터 파싱 및 상태 초기화
+    const quizData = JSON.parse(jsonDataScript.textContent);
+    let currentQuestionIndex = 0;
+    const totalQuestions = quizData.questions.length;
+
+    // 3. UI 요소 캐싱 (자주 접근하는 요소들을 변수에 저장)
+    const elements = {
+      progress: quizContainer.querySelector('.quiz-progress'),
+      question: quizContainer.querySelector('.quiz-question'),
+      hint: quizContainer.querySelector('.quiz-hint'),
+      hintContent: quizContainer.querySelector('.quiz-hint-content'),
+      optionsList: quizContainer.querySelector('.quiz-options'),
+      prevButton: quizContainer.querySelector('.quiz-prev'),
+      nextButton: quizContainer.querySelector('.quiz-next')
+    };
+
+    /**
+      * 선택지 클릭 시 피드백을 처리하는 함수
+      */
+    function handleOptionClick(event) {
+      const clickedOption = event.currentTarget;
+
+      // 이미 답변을 선택했으면 아무것도 하지 않음
+      if (clickedOption.classList.contains('disabled')) {
+        return;
+      }
+
+      const clickedId = clickedOption.dataset.optionId;
+      const question = quizData.questions[currentQuestionIndex];
+      const correctId = question.feedback.correct_id;
+      const isCorrect = (clickedId === correctId);
+
+      // 힌트 즉시 숨기기 (1단계 기능)
+      if (elements.hint) {
+        elements.hint.style.display = 'none';
+      }
+
+      // 모든 선택지 비활성화 (중복 클릭 방지)
+      elements.optionsList.querySelectorAll('.quiz-option').forEach(opt => {
+        opt.classList.add('disabled');
+      });
+
+      if (isCorrect) {
+        // [정답일 때]
+        clickedOption.classList.add('correct');
+        const feedbackEl = document.createElement('div');
+        feedbackEl.className = 'quiz-inline-feedback correct';
+        feedbackEl.innerHTML = `
+          <div class="feedback-title">
+            <span class="icon">✅</span> That's right!
+          </div>
+          <div class="feedback-text">${question.feedback[clickedId]}</div>
+        `;
+        clickedOption.appendChild(feedbackEl); // <li> 내부에 삽입
+      } else {
+        // [오답일 때]
+        // 1. 오답 선택지에 'Not quite' 피드백 삽입
+        clickedOption.classList.add('incorrect');
+        const feedbackEl = document.createElement('div');
+        feedbackEl.className = 'quiz-inline-feedback incorrect';
+        feedbackEl.innerHTML = `
+          <div class="feedback-title">
+            <span class="icon">❌</span> Not quite
+          </div>
+          <div class="feedback-text">${question.feedback[clickedId]}</div>
+        `;
+        clickedOption.appendChild(feedbackEl); // <li> 내부에 삽입
+
+        // 실제 정답 선택지를 찾아서 'Right answer' 피드백 삽입
+        const correctOption = elements.optionsList.querySelector(`.quiz-option[data-option-id="${correctId}"]`);
+        if (correctOption) {
+          correctOption.classList.add('correct'); // 정답 하이라이트
+          const correctFeedbackEl = document.createElement('div');
+          correctFeedbackEl.className = 'quiz-inline-feedback correct';
+          correctFeedbackEl.innerHTML = `
+            <div class="feedback-title">
+              <span class="icon">✅</span> Right answer
+            </div>
+            <div class="feedback-text">${question.feedback[correctId]}</div>
+          `;
+          correctOption.appendChild(correctFeedbackEl); // 정답 <li> 내부에 삽입
+        }
+      }
+    }
+
+    /**
+    * 문항 렌더링 함수: 특정 인덱스의 문항 데이터를 가져와 UI에 그립니다.
+    */
+    function renderQuestion(index) {
+      const question = quizData.questions[index];
+
+      // 텍스트 업데이트
+      elements.progress.textContent = question.progress || `${index + 1}/${totalQuestions}`;
+      elements.question.textContent = question.question_text;
+
+      // 힌트 처리
+      if (question.hint_text) {
+        elements.hintContent.textContent = question.hint_text;
+        elements.hint.style.display = 'block'; // 힌트가 있으면 표시
+        elements.hint.open = false; // 힌트는 기본적으로 닫힌 상태
+      } else {
+        elements.hint.style.display = 'none'; // 힌트가 없으면 숨김
+      }
+
+      // 선택지 목록 (기존 목록 비우고 새로 채우기)
+      elements.optionsList.innerHTML = ''; // 목록 비우기
+      question.options.forEach(option => {
+        const li = document.createElement('li');
+        li.className = 'quiz-option'; // 1단계에서 만든 CSS 클래스
+        li.dataset.optionId = option.id;
+        li.innerHTML = `<span class="option-letter">${option.id}.</span><span class="option-text">${option.text}</span>`;
+
+        // { once: true } 를 사용하여 한 번만 클릭되도록 보장
+        li.addEventListener('click', handleOptionClick, { once: true });
+
+        elements.optionsList.appendChild(li);
+      });
+
+      // 내비게이션 버튼 상태 업데이트
+      elements.prevButton.disabled = (index === 0);
+      elements.nextButton.disabled = (index === totalQuestions - 1);
+    }
+
+    /**
+      * 이벤트 리스너 바인딩 (Next/Prev 버튼)
+      */
+    elements.nextButton.addEventListener('click', () => {
+      if (currentQuestionIndex < totalQuestions - 1) {
+        currentQuestionIndex++;
+        renderQuestion(currentQuestionIndex);
+      }
+    });
+
+    elements.prevButton.addEventListener('click', () => {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        renderQuestion(currentQuestionIndex);
+      }
+    });
+
+    /**
+      * 퀴즈 초기화: 첫 번째 문항 렌더링
+      */
+    renderQuestion(currentQuestionIndex);
+  })();
+</script>
+
+{% else %}
+<p style="color: red;">[Quiz Widget Error] 퀴즈 데이터를 찾을 수 없습니다: {{ include.quiz_id }}</p>
+{% endif %}

@@ -15,21 +15,26 @@ header:
 excerpt: "코딩, 디자인, 마케팅의 실용적인 팁과 리소스를 탐색하세요."
   
 feature_row:
+  - image_path: /assets/images/index/lightbulb-solid-full.svg
+    title: "인사이트"
+    excerpt: "사례 연구, 비즈니스 전략, 마인드셋 등 1인 개발의 'Why'와 'What'을 다룹니다."
+    url: "/insights/"
+    btn_label: "더 알아보기"  
   - image_path: /assets/images/index/code-solid-full.svg
-    title: "코딩 (Development)"
+    title: "코딩"
     excerpt: "개발 팁, 프레임워크, 유용한 정보들을 아카이빙합니다."
     url: "/coding/"
-    btn_label: "Learn More"
+    btn_label: "더 알아보기"
   - image_path: /assets/images/index/palette-solid-full.svg
-    title: "디자인 (Design)"
+    title: "디자인"
     excerpt: "1인 개발자를 위한 UI/UX 디자인 팁과 리소스 모음입니다."
     url: "/design/"
-    btn_label: "Learn More"
+    btn_label: "더 알아보기"
   - image_path: /assets/images/index/chart-simple-solid-full.svg
-    title: "마케팅 (Marketing)"
+    title: "마케팅"
     excerpt: "내 앱을 알리고 사용자를 모으는 방법, 마케팅 전략입니다."
     url: "/marketing/"
-    btn_label: "Learn More"
+    btn_label: "더 알아보기"
 ---
 
 {% include feature_row %}
