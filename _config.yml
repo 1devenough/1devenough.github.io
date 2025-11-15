@@ -37,3 +37,9 @@ comments:
     theme: preferred_color_scheme
     lang: ko
     crossorigin: anonymous
+
+analytics:
+  provider: "google-gtag-v4"
+  google:
+    measurement_id: "G-SX3ZKM9WN9"
+    anonymize_ip: false
