@@ -25,6 +25,6 @@ comments: false
 
 이 포털이 여러분의 귀중한 시간을 아껴주는 **'실용적인 나침반'**이 되기를 바랍니다. 1인 개발자로서 겪는 시행착오를 줄이고, 함께 성장할 수 있기를 기대합니다.
 
-<a href="[https://open.kakao.com/o/gg8kEbuh]" class="btn btn--large" target="_blank" rel="noopener noreferrer">
+<a href="https://open.kakao.com/o/gg8kEbuh" class="btn btn--large" target="_blank" rel="noopener noreferrer">
   <i class="fas fa-comments"></i>&nbsp;&nbsp;1DevEnough 오픈 채팅방 참여하기
 </a>
