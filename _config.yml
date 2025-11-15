@@ -43,3 +43,6 @@ analytics:
   google:
     measurement_id: "G-SX3ZKM9WN9"
     anonymize_ip: false
+
+webmaster_tools:
+  google: "5SY9zCErCahpM158jrR_h8mxSeRos"
