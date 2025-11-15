@@ -7,9 +7,13 @@ main:
     url: /insights/
   - title: "코딩"
     url: /coding/
+    disabled: true
   - title: "디자인"
     url: /design/
+    disabled: true
   - title: "마케팅"
     url: /marketing/
+    disabled: true
   - title: "모든 글"
-    url: /posts/
+    url: /archive/
+

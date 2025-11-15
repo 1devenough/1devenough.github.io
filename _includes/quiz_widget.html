@@ -10,12 +10,12 @@
 
     <div class="quiz-question"></div>
 
+    <ul class="quiz-options"></ul>
+
     <details class="quiz-hint" style="display: none;">
         <summary>Hint</summary>
         <div class="quiz-hint-content"></div>
-    </details>
-
-    <ul class="quiz-options"></ul>
+    </details>    
 
     <div class="quiz-navigation">
         <button class="quiz-prev" disabled>Previous</button>
@@ -88,7 +88,7 @@
         feedbackEl.className = 'quiz-inline-feedback correct';
         feedbackEl.innerHTML = `
           <div class="feedback-title">
-            <span class="icon">✅</span> That's right!
+            <span class="icon">✅</span> 정답입니다!
           </div>
           <div class="feedback-text">${question.feedback[clickedId]}</div>
         `;
@@ -101,7 +101,7 @@
         feedbackEl.className = 'quiz-inline-feedback incorrect';
         feedbackEl.innerHTML = `
           <div class="feedback-title">
-            <span class="icon">❌</span> Not quite
+            <span class="icon">❌</span> 정답이 아닙니다.
           </div>
           <div class="feedback-text">${question.feedback[clickedId]}</div>
         `;

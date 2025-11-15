@@ -5558,5 +5558,60 @@ body {
     color-scheme: dark;
   }
 }
+/* --- 비활성 Feature Row 카드 스타일  --- */
+.feature__item {
+  position: relative;
+}
+
+/* 비활성화된 카드 ( opacity + 흑백 ) */
+.feature__item--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* '준비 중' 배지 스타일 */
+.feature__item-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #525252;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* Masthead (상단) 네비게이션 비활성 스타일 */
+.masthead__menu-item--disabled {
+  /* 이 <li> 안에 있는 <a> 태그 (href 속성이 없는)를
+    비활성화된 링크처럼 스타일링합니다.
+  */
+}
+.masthead__menu-item--disabled > a {
+  color: #9e9e9e !important; /* 연한 회색 */
+  cursor: not-allowed; /* '사용 불가' 커서 */
+}
+.masthead__menu-item--disabled {
+  /* 마우스를 올려도 색이 변하거나 밑줄이 생기지 않도록 방지 */
+}
+.masthead__menu-item--disabled > a:hover {
+  color: #9e9e9e !important;
+  text-decoration: none;
+}
+
+/* 네비게이션 '준비 중' 배지 (재사용) */
+.nav__item-badge {
+  display: inline-block;
+  background-color: #525252;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
 
 /*# sourceMappingURL=main.css.map */

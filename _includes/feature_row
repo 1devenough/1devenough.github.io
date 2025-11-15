@@ -1,0 +1,34 @@
+<div class="feature__wrapper">
+  {% for i in page.feature_row %}
+    
+    <div class="feature__item{% if i.disabled %} feature__item--disabled{% endif %}">
+      <div class="archive__item">
+
+        {% if i.disabled %}
+          <span class="feature__item-badge">준비 중</span>
+        {% endif %}
+
+        {% if i.image_path %}
+          <div class="archive__item-teaser">
+            <img src="{{ i.image_path | relative_url }}" alt="{% if i.image_alt %}{{ i.image_alt }}{% else %}{{ i.title }}{% endif %}">
+          </div>
+        {% endif %}
+
+        <div class="archive__item-body">
+          {% if i.title %}
+            <h2 class="archive__item-title">{{ i.title }}</h2>
+          {% endif %}
+          {% if i.excerpt %}
+            <div class="archive__item-excerpt">
+              <p>{{ i.excerpt }}</p>
+            </div>
+          {% endif %}
+          
+          {% if i.url and i.disabled != true %}
+            <p><a href="{{ i.url | relative_url }}" class="btn {{ i.btn_class }}">{{ i.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

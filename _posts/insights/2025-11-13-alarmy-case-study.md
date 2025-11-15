@@ -16,14 +16,15 @@ show_title: false
 breadcrumbs: true
 
 comments: true
+
+show_explore_more: true
 ---
 
 ### '알라미'는 어떻게 1억 유저를 달성했나
 
 이 콘텐츠는 '조코딩' 채널의 팟캐스트 인터뷰 영상을 기반으로 합니다. 1인 개발로 시작해 연 매출 337억을 달성한 '알라미' 신재명 대표의 여정을 4가지 핵심 전략으로 분석했습니다.
 
-**[원본 영상 보기]**
-<https://www.youtube.com/watch?v=-y6GHs5WtMY>
+{% include video provider="youtube" id="-y6GHs5WtMY" %}
 
 ---
 
