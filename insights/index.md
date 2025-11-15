@@ -39,16 +39,19 @@ feature_row:
     excerpt: "성공 및 실패 사례 분석."
     url: "/insights/case-studies/" # (Future page)
     btn_label: "더 알아보기"
+    disabled: true
   - image_path: /assets/images/index/chart-simple-solid-full.svg # Placeholder
     title: "비즈니스・전략"
     excerpt: "수익화, 법률, 마케팅 전략."
     url: "/insights/business/" # (Future page)
     btn_label: "더 알아보기"
+    disabled: true
   - image_path: /assets/images/index/chart-simple-solid-full.svg # Placeholder
     title: "마인드셋"
     excerpt: "지속가능성, 동기부여."
     url: "/insights/mindset/" # (Future page)
     btn_label: "더 알아보기"
+    disabled: true
 ---
 
 {% include curated_row.html %}
