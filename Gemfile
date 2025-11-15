@@ -8,6 +8,7 @@ gem "jekyll-remote-theme"
 gem "jekyll-feed"
 gem "jekyll-seo-tag"
 gem "jekyll-include-cache"
+gem "jekyll-sitemap"
 
 gem "webrick"
 
