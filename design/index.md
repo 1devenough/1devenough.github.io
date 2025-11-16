@@ -25,7 +25,7 @@ header:
 #################################################################
 curated_title: "시작 가이드: 추천 워크플로우"
 curated_picks:
-  - title: "AI로 기획부터 디자인 시스템까지: A-to-Z 워크플로우"
+  - title: "AI로 기획부터 디자인 시스템까지 A-to-Z 워크플로우"
     excerpt: "1인 개발자의 가장 큰 장벽인 '기획'과 '디자인'을 AI(Notion, Stitch)로 한 번에 해결하는 실용적인 워크플로우입니다."
     url: "/design/ai-workflow-prd-to-design/"
 
