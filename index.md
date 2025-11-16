@@ -31,7 +31,7 @@ feature_row:
     excerpt: "1인 개발자를 위한 UI/UX 디자인 팁과 리소스 모음입니다."
     url: "/design/"
     btn_label: "더 알아보기"
-    disabled: true
+    disabled: false
   - image_path: /assets/images/index/chart-simple-solid-full.svg
     title: "마케팅"
     excerpt: "내 앱을 알리고 사용자를 모으는 방법, 마케팅 전략입니다."

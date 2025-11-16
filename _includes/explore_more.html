@@ -1,7 +1,37 @@
+{% comment %}
+  페이지의 카테고리를 기반으로 동적으로 텍스트와 링크를 설정한다.
+  page.categories는 리스트(예: ["insights"])이므로 첫 번째 항목을 가져온다.
+{% endcomment %}
+{% assign category = page.categories | first %}
+
+{% comment %}
+  기본값 설정 (카테고리가 없는 경우를 대비)
+{% endcomment %}
+{% assign explore_text = "전체 아티클 보러가기" %}
+{% assign explore_url = "/archive/" %}
+
+{% comment %}
+  카테고리별로 텍스트와 URL을 분기합니다.
+{% endcomment %}
+{% if category == "insights" %}
+  {% assign explore_text = "전체 '인사이트 허브' 보러 가기" %}
+  {% assign explore_url = "/insights/" %}
+{% elsif category == "design" %}
+  {% assign explore_text = "전체 '디자인 허브' 보러 가기" %}
+  {% assign explore_url = "/design/" %}
+{% elsif category == "coding" %}
+  {% assign explore_text = "전체 '코딩 허브' 보러 가기" %}
+  {% assign explore_url = "/coding/" %}
+{% elsif category == "marketing" %}
+  {% assign explore_text = "전체 '마케팅 허브' 보러 가기" %}
+  {% assign explore_url = "/marketing/" %}
+{% endif %}
+
+
 <div class="page__content" style="padding-top: 0; padding-bottom: 0;">
   <p>
-    <a href="/insights/" class="btn btn--large">
-      <i class="fas fa-arrow-right"></i>&nbsp;&nbsp;전체 '인사이트 허브' 보러 가기
+    <a href="{{ explore_url | relative_url }}" class="btn btn--large">
+      <i class="fas fa-arrow-right"></i>&nbsp;&nbsp;{{ explore_text }}
     </a>
   </p>
 </div>

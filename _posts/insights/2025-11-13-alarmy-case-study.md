@@ -3,13 +3,12 @@
 
 title: "'알라미' 사례 연구 분석"
 excerpt: "성공적인 1인 개발 앱 '알라미'의 핵심 전략을 분석합니다."
-layout: single # 포스트는 'single' 레이아웃을 사용합니다.
+layout: single
 categories:
-  - insights # 'insights' 카테고리로 지정해야 허브 페이지 하단에 노출됩니다.
+  - insights
 
 show_title: false
 
-# (선택) 포스트 상단에 썸네일 이미지를 표시할 수 있습니다.
 #header:
 #  image: /assets/images/alarmy-thumbnail.jpg # (예시 이미지 경로)
 #  teaser: /assets/images/alarmy-thumbnail.jpg # 아카이브 목록에 표시될 썸네일
@@ -20,7 +19,7 @@ comments: true
 show_explore_more: true
 ---
 
-### '알라미'는 어떻게 1억 유저를 달성했나
+# '알라미'는 어떻게 1억 유저를 달성했나
 
 이 콘텐츠는 '조코딩' 채널의 팟캐스트 인터뷰 영상을 기반으로 합니다. 1인 개발로 시작해 연 매출 337억을 달성한 '알라미' 신재명 대표의 여정을 4가지 핵심 전략으로 분석했습니다.
 
@@ -47,7 +46,7 @@ show_explore_more: true
     <div id="tab-pane-1" class="tab-pane">
       <div class="tab-pane-content" markdown="1">
 
-### 1인 개발 알람 앱, 연 매출 337억을 달성한 4가지 역발상 전략
+## 1인 개발 알람 앱, 연 매출 337억을 달성한 4가지 역발상 전략
 
 알람 앱 '알라미(Alarmy)'는 1인 개발로 시작해 연 매출 337억 원의 글로벌 비즈니스가 되었습니다. 신재명 대표가 인터뷰에서 밝힌 이 성공의 이면에는 일반적인 성장 공식이 아닌, 4가지 강력한 역발상 전략이 있었습니다.
 

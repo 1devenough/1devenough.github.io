@@ -10,7 +10,7 @@ main:
     disabled: true
   - title: "디자인"
     url: /design/
-    disabled: true
+    disabled: false
   - title: "마케팅"
     url: /marketing/
     disabled: true
