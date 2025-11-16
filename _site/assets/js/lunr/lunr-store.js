@@ -5,7 +5,7 @@ var store = [{
         "url": "/insights/alarmy-case-study/",
         "teaser": null
       },{
-        "title": "AI 워크플로우 A to Z: 기획(PRD)부터 디자인 시스템까지",
+        "title": "AI로 기획부터 디자인 시스템까지 A-to-Z 워크플로우",
         "excerpt":"1인 개발 워크플로우 A to Z: AI 기획부터 디자인까지 이 콘텐츠는 ‘바이브랩스’ 채널의 ‘포트폴리오 만들기’ 시리즈 영상 2편(PRD, Stitch)을 기반으로 합니다. 1인 개발자의 가장 큰 장벽인 ‘기획(PRD)’부터 ‘디자인 시스템’까지 AI(Notion AI, Stitch)로 완성하는 A-to-Z 워크플로우의 핵심 인사이트를 큐레이션했습니다. Part 1: AI와 ‘티키타카’하며 ‘살아있는’ 기획서(PRD) 만들기 Part 2: AI에게 ‘기획서’를 던져서...","categories": ["design"],
         "tags": [],
         "url": "/design/ai-workflow-prd-to-design/",

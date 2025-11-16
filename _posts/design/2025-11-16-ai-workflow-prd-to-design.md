@@ -1,7 +1,7 @@
 ---
 # _posts/design/2025-11-16-ai-workflow-prd-to-design.md
 
-title: "AI 워크플로우 A to Z: 기획(PRD)부터 디자인 시스템까지"
+title: "AI로 기획부터 디자인 시스템까지 A-to-Z 워크플로우"
 excerpt: "1인 개발자의 가장 큰 장벽인 '기획'과 '디자인'을 AI(Notion, Stitch)로 한 번에 해결하는 실용적인 워크플로우입니다."
 layout: single
 categories:
