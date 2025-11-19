@@ -11,6 +11,7 @@ plugins:
 remote_theme: "mmistakes/minimal-mistakes"
  
 title: 1DevEnough
+url: "https://1devenough.github.io"
 #description: 1인 개발을 위한 모든 것
 
 logo: "/assets/images/index/logo.png"
