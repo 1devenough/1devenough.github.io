@@ -1,0 +1,19 @@
+{% assign data = site.data.next_insights %}
+
+{% if data.content %}
+<div
+    style="margin: 3em 0; padding: 1.5em; background-color: #f8f9fa; border-left: 5px solid #00C4CC; border-radius: 8px;">
+    <h3 style="margin-top: 0;">
+        {% if data.icon %}<i class="{{ data.icon }}" aria-hidden="true" style="margin-right: 0.5em;"></i>{% endif %}
+        {{ data.heading }}
+    </h3>
+    <div style="font-size: 1.1em; line-height: 1.7; color: #333;">
+        {{ data.content | markdownify }}
+    </div>
+    {% if data.signature %}
+    <p style="text-align: right; font-style: italic; color: #777; margin-bottom: 0; margin-top: 1em;">
+        {{ data.signature }}
+    </p>
+    {% endif %}
+</div>
+{% endif %}

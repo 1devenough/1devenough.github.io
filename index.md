@@ -42,6 +42,8 @@ feature_row:
 
 {% include feature_row %}
 
+{% include next-insights-note.html %}
+
 <hr>
 
 <div class="latest-posts-row" style="margin-bottom: 2em;">

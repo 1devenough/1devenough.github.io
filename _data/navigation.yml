@@ -1,8 +1,8 @@
 # _data/navigation.yml
 
 main:
-  - title: "소개"
-    url: /about/
+  - title: "홈"
+    url: /
   - title: "인사이트"
     url: /insights/
   - title: "코딩"
@@ -16,4 +16,7 @@ main:
     disabled: true
   - title: "모든 글"
     url: /archive/
-
+  - title: "소개"
+    url: /about/
+    disabled: false
+    
