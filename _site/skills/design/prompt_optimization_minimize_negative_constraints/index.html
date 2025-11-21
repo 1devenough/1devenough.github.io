@@ -1,0 +1,31 @@
+<h2 id="-문제-problem--핵심-core">📌 문제 (Problem) / 핵심 (Core)</h2>
+<p>프롬프트에 “Do not…”, “Avoid…”, “No…“와 같은 부정 제약 조건이 많아질수록, 생성된 이미지의 창의성이 떨어지고 결과물이 경직되거나 밋밋해지는 현상이 발생한다. 
+예를 들어, <code class="language-plaintext highlighter-rouge">No gradients</code>, <code class="language-plaintext highlighter-rouge">No outlines</code>, <code class="language-plaintext highlighter-rouge">No 3D</code>, <code class="language-plaintext highlighter-rouge">No shadow</code> 등을 나열하면 AI는 스타일을 살리기보다 ‘하지 말라는 것을 피하는 데’ 집중하여 가장 안전하고 재미없는(Safe but Boring) 결과를 내놓는다.</p>
+
+<h2 id="-원인--맥락-context">💡 원인 / 맥락 (Context)</h2>
+<p>생성형 AI 모델은 확률적으로 가장 적절한 이미지를 찾아가는 구조다. 긍정 명령(Positive Prompt)은 AI에게 ‘갈 방향’을 알려주어 탐색 공간을 넓혀주지만, 부정 명령(Negative Prompt)은 ‘가지 말아야 할 곳’에 벽을 세우는 행위다. 
+벽이 너무 많으면 AI가 움직일 수 있는 공간(Latent Space)이 좁아져서, Memphis 스타일 특유의 ‘과장됨’, ‘유기적 흐름’, ‘역동성’ 같은 우연한 예술적 요소들까지 차단된다.</p>
+
+<h2 id="-해결책--지침-solution--rule">✅ 해결책 / 지침 (Solution / Rule)</h2>
+<ol>
+  <li><strong>긍정 프레임 전환 (Positive Framing):</strong> 부정적인 제약을 긍정적인 묘사로 바꾼다.
+    <ul>
+      <li><em>Bad (Negative):</em> “No outlines” (선 그리지 마)</li>
+      <li><em>Good (Positive):</em> “Shapes defined by solid color blocks” (형태는 단색 블록으로 정의됨)</li>
+      <li><em>Bad (Negative):</em> “Avoid realistic proportions” (현실적 비율 피해서)</li>
+      <li><em>Good (Positive):</em> “Abstract and stylized geometric forms” (추상적이고 양식화된 기하학적 형태)</li>
+    </ul>
+  </li>
+  <li><strong>핵심 제약만 남기기 (Essential Negatives Only):</strong>
+    <ul>
+      <li>스타일을 완전히 파괴하는 치명적인 요소(예: “3D render”, “Photo-realistic”)나 반복되는 오류(예: “Bad anatomy”, “Text”)를 막을 때만 제한적으로 부정 명령을 사용한다.</li>
+      <li>스타일의 미묘한 뉘앙스(예: 곡선의 정도, 색감의 미세 조정)는 긍정 묘사로 유도한다.</li>
+    </ul>
+  </li>
+  <li><strong>스타일 키워드 신뢰하기:</strong>
+    <ul>
+      <li>일일이 제약 조건을 나열하는 대신, 해당 스타일을 잘 설명하는 대표 장르명(예: <code class="language-plaintext highlighter-rouge">Corporate Memphis</code>, <code class="language-plaintext highlighter-rouge">Flat Vector Art</code>)을 사용하면 AI가 알아서 불필요한 요소(3D, 실사 느낌 등)를 배제한다.</li>
+    </ul>
+  </li>
+</ol>
+

@@ -5217,8 +5217,10 @@ body {
 
 .layout--splash .page__hero--overlay .page__title,
 .layout--splash .page__hero--overlay .page__lead {
-  color: inherit; /* 기본 텍스트 색상 상속 */
-  text-shadow: none; /* 텍스트 그림자(엠보싱 효과) 제거 */
+  color: inherit;
+  /* 기본 텍스트 색상 상속 */
+  text-shadow: none;
+  /* 텍스트 그림자(엠보싱 효과) 제거 */
 }
 
 /* 기존 Page Hero 중앙 정렬 스타일 */
@@ -5237,7 +5239,8 @@ body {
   border: 1px solid #E8EAED;
   padding: 23px;
   border-radius: 8px;
-  display: flex; /* 내부 아이템이 높이를 꽉 채우도록 설정 */
+  display: flex;
+  /* 내부 아이템이 높이를 꽉 채우도록 설정 */
   flex-direction: column;
 }
 
@@ -5245,13 +5248,16 @@ body {
 .feature__item .archive__item {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* 카드의 남는 공간을 모두 차지하여 높이를 통일 */
+  flex-grow: 1;
+  /* 카드의 남는 공간을 모두 차지하여 높이를 통일 */
 }
 
 .feature__item img {
   max-width: 48px !important;
-  height: auto !important; /* 가로세로 비율 유지를 위해 추가 */
-  margin-bottom: 1em; /* 아이콘과 제목 사이 여백 추가 */
+  height: auto !important;
+  /* 가로세로 비율 유지를 위해 추가 */
+  margin-bottom: 1em;
+  /* 아이콘과 제목 사이 여백 추가 */
 }
 
 /* 제목(h2) 위쪽 여백 제거 */
@@ -5275,7 +5281,8 @@ body {
 /* 버튼을 감싸는 <p> 태그를 아래로 밀어냄 */
 .feature__item .archive__item p:has(> .btn) {
   margin-top: auto;
-  margin-bottom: 0; /* p 태그의 기본 여백 제거 */
+  margin-bottom: 0;
+  /* p 태그의 기본 여백 제거 */
 }
 
 /* --- Content Hub Tabs (CSS-Only) --- */
@@ -5291,7 +5298,8 @@ body {
 /* 탭 링크(label) 영역 */
 .content-hub-tabs .tab-links {
   display: flex;
-  flex-wrap: wrap; /* 모바일에서 탭이 여러 줄로 나뉠 수 있도록 함 */
+  flex-wrap: wrap;
+  /* 모바일에서 탭이 여러 줄로 나뉠 수 있도록 함 */
   background-color: #F9FAFB;
   border-bottom: 1px solid #E8EAED;
   padding: 0;
@@ -5304,8 +5312,10 @@ body {
   cursor: pointer;
   font-weight: 600;
   color: #525252;
-  border-bottom: 3px solid transparent; /* 비활성 상태의 하단 테두리 */
-  margin-bottom: -1px; /* 하단 테두리와의 경계를 맞춤 */
+  border-bottom: 3px solid transparent;
+  /* 비활성 상태의 하단 테두리 */
+  margin-bottom: -1px;
+  /* 하단 테두리와의 경계를 맞춤 */
   transition: all 0.2s ease-in-out;
   list-style: none;
   display: inline-block;
@@ -5319,7 +5329,8 @@ body {
 /* 탭 콘텐츠 영역 (pane) */
 .content-hub-tabs .tab-pane {
   padding: 1.5em;
-  display: none; /* 모든 탭 콘텐츠를 기본적으로 숨김 */
+  display: none;
+  /* 모든 탭 콘텐츠를 기본적으로 숨김 */
 }
 
 /* * CSS-Only 로직:
@@ -5328,7 +5339,8 @@ body {
  * 3. :checked 된 라디오 버튼의 형제(~) 요소인 .tab-pane을 display: block으로 보여줌
  */
 .content-hub-tabs input[type=radio] {
-  display: none; /* 라디오 버튼 숨기기 */
+  display: none;
+  /* 라디오 버튼 숨기기 */
 }
 
 /* 활성 탭(label) 스타일 (수정됨) */
@@ -5342,7 +5354,8 @@ body {
 #tab-ctrl-4:checked ~ .tab-links label[for=tab-ctrl-4],
 #tab-ctrl-5:checked ~ .tab-links label[for=tab-ctrl-5] {
   color: #000;
-  border-bottom: 3px solid #48BB78; /* 활성 탭의 녹색 하단 테두리 */
+  border-bottom: 3px solid #48BB78;
+  /* 활성 탭의 녹색 하단 테두리 */
 }
 
 /* 활성 탭 콘텐츠(pane) 표시 */
@@ -5357,16 +5370,24 @@ body {
 /* Content Hub Tab Icons */
 .tab-icon-article {
   color: #007bff;
-} /* 예: 아티클 (파란색) */
+}
+
+/* 예: 아티클 (파란색) */
 .tab-icon-slide {
   color: #d9534f;
-} /* 예: 슬라이드 (빨간색) */
+}
+
+/* 예: 슬라이드 (빨간색) */
 .tab-icon-audio {
   color: #5bc0de;
-} /* 예: 오디오 (하늘색) */
+}
+
+/* 예: 오디오 (하늘색) */
 .tab-icon-quiz {
   color: #f0ad4e;
-} /* 예: 퀴즈 (노란색) */
+}
+
+/* 예: 퀴즈 (노란색) */
 /* --- Quiz Widget Styles --- */
 /* 전체 래퍼 */
 .quiz-widget-container {
@@ -5421,13 +5442,15 @@ body {
   margin-left: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75em; /* 선택지 사이 간격 */
+  gap: 0.75em;
+  /* 선택지 사이 간격 */
 }
 
 /* 선택지 상태 스타일 (li) */
 .quiz-option {
   display: flex;
-  align-items: flex-start; /* 텍스트가 여러 줄일 경우 위쪽 정렬 */
+  align-items: flex-start;
+  /* 텍스트가 여러 줄일 경우 위쪽 정렬 */
   background-color: #fff;
   border: 1px solid #E8EAED;
   padding: 1em 1.2em;
@@ -5470,7 +5493,8 @@ body {
 }
 
 .quiz-option.disabled:hover {
-  background-color: #fff; /* 비활성화 시 호버 효과 제거 */
+  background-color: #fff;
+  /* 비활성화 시 호버 효과 제거 */
   border-color: #E8EAED;
 }
 
@@ -5489,15 +5513,18 @@ body {
   width: 100%;
   margin-top: 1em;
   padding-top: 1em;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); /* 구분선 */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* 구분선 */
 }
 
 .quiz-option.correct .quiz-inline-feedback {
-  border-top-color: #A3D4B6; /* 녹색 구분선 */
+  border-top-color: #A3D4B6;
+  /* 녹색 구분선 */
 }
 
 .quiz-option.incorrect .quiz-inline-feedback {
-  border-top-color: #E0E0E0; /* 회색 구분선 */
+  border-top-color: #E0E0E0;
+  /* 회색 구분선 */
 }
 
 .quiz-inline-feedback .feedback-title {
@@ -5515,11 +5542,13 @@ body {
 
 /* 정답/오답에 따른 아이콘 및 텍스트 색상 */
 .quiz-inline-feedback.correct .feedback-title {
-  color: #2E7D32; /* 진한 녹색 */
+  color: #2E7D32;
+  /* 진한 녹색 */
 }
 
 .quiz-inline-feedback.incorrect .feedback-title {
-  color: #C62828; /* 진한 붉은색 */
+  color: #C62828;
+  /* 진한 붉은색 */
 }
 
 .quiz-inline-feedback .feedback-text {
@@ -5590,8 +5619,10 @@ body {
   */
 }
 .masthead__menu-item--disabled > a {
-  color: #9e9e9e !important; /* 연한 회색 */
-  cursor: not-allowed; /* '사용 불가' 커서 */
+  color: #9e9e9e !important;
+  /* 연한 회색 */
+  cursor: not-allowed;
+  /* '사용 불가' 커서 */
 }
 .masthead__menu-item--disabled {
   /* 마우스를 올려도 색이 변하거나 밑줄이 생기지 않도록 방지 */
@@ -5612,6 +5643,32 @@ body {
   border-radius: 4px;
   margin-left: 8px;
   vertical-align: middle;
+}
+
+/* --- Excerpt (Lead Paragraph) 스타일링 --- */
+.page__content .page__lead {
+  font-family: inherit;
+  /* 기본 폰트 상속 */
+  font-size: 1.35rem;
+  /* 제목보다는 작고 본문보다는 크게 설정 */
+  font-weight: 400;
+  /* 굵기를 일반으로 설정하여 제목과 차별화 */
+  color: #6e7886;
+  /* 진한 회색으로 설정하여 시각적 계층 구분 */
+  line-height: 1.6;
+  /* 가독성을 위한 줄 간격 */
+  margin-bottom: 2rem;
+  /* 본문과의 간격 확보 */
+  margin-top: 0;
+  /* 상단 여백 제거 */
+}
+
+/* (선택사항) 다크 모드 대응이 필요하다면 추가 */
+@media (prefers-color-scheme: dark) {
+  .page__content .page__lead {
+    color: #b0b0b0;
+    /* 다크 모드에서는 밝은 회색 */
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

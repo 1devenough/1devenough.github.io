@@ -19,7 +19,9 @@ comments: true
 show_explore_more: true
 ---
 
+<p class="page__lead">
 # 1인 개발 워크플로우 A to Z: AI 기획부터 디자인까지
+</p>
 
 이 콘텐츠는 '바이브랩스' 채널의 '포트폴리오 만들기' 시리즈 영상 2편(PRD, Stitch)을 기반으로 합니다. 1인 개발자의 가장 큰 장벽인 '기획(PRD)'부터 '디자인 시스템'까지 AI(Notion AI, Stitch)로 완성하는 A-to-Z 워크플로우의 핵심 인사이트를 큐레이션했습니다.
 

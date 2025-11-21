@@ -1,0 +1,17 @@
+<h2 id="-문제-problem--핵심-core">📌 문제 (Problem) / 핵심 (Core)</h2>
+<p>브랜드 컬러(예: Mint, Coral)를 프롬프트에 입력하면 AI가 피부, 머리카락, 사물까지 모든 요소를 해당 색으로 칠해버려 듀오톤(Duotone) 필터를 낀 것처럼 보인다. 반대로 다양성(Diversity)을 허용하면 브랜드 톤앤매너가 깨지고 색이 산만해진다.</p>
+
+<h2 id="-원인--맥락-context">💡 원인 / 맥락 (Context)</h2>
+<p>AI에게 색상 이름은 매우 강력한 토큰이다. “Mint and Coral palette”라고 하면 이를 ‘제약(Constraint)’으로 인식하여 다른 색 사용을 억제한다. 또한 <code class="language-plaintext highlighter-rouge">Bright</code>, <code class="language-plaintext highlighter-rouge">Vivid</code> 등의 수식어는 1DevEnough가 추구하는 ‘차분한 신뢰감(Zappy Style)’을 해친다.</p>
+
+<h2 id="-해결책--지침-solution--rule">✅ 해결책 / 지침 (Solution / Rule)</h2>
+<ol>
+  <li><strong>역할 분담 (Role Assignment):</strong> 색상별 용도를 명확히 제한한다.
+    <ul>
+      <li><strong>브랜드 컬러 (Mint/Coral):</strong> <code class="language-plaintext highlighter-rouge">Accent colors</code>, <code class="language-plaintext highlighter-rouge">Background shapes</code>, <code class="language-plaintext highlighter-rouge">Robots</code>, <code class="language-plaintext highlighter-rouge">Arrows</code>에만 사용.</li>
+      <li><strong>고유 색상 (Specifics):</strong> 주인공의 <code class="language-plaintext highlighter-rouge">Yellow Hoodie</code>, <code class="language-plaintext highlighter-rouge">Dark Pants</code>, <code class="language-plaintext highlighter-rouge">Light Skin Tone</code>은 별도로 지정하여 브랜드 컬러의 침범을 막는다.</li>
+    </ul>
+  </li>
+  <li><strong>톤 보정 (Tone-on-Tone):</strong> <code class="language-plaintext highlighter-rouge">Bright</code> 대신 <strong><code class="language-plaintext highlighter-rouge">Muted</code>, <code class="language-plaintext highlighter-rouge">Pastel</code>, <code class="language-plaintext highlighter-rouge">Soft</code>, <code class="language-plaintext highlighter-rouge">Matte</code></strong> 키워드를 사용하여 채도를 낮춘다.</li>
+  <li><strong>배경색 지정:</strong> 배경은 <code class="language-plaintext highlighter-rouge">Off-white</code>나 <code class="language-plaintext highlighter-rouge">Slightly brightened Mint (V&gt;30)</code>를 사용하여 시인성을 확보한다.</li>
+</ol>

@@ -1,0 +1,26 @@
+<h2 id="-문제-problem--핵심-core">📌 문제 (Problem) / 핵심 (Core)</h2>
+<p>“다이아몬드 모양으로 배치해줘”라고 추상적으로 요청하면, AI는 다이아몬드 ‘형태’를 인식하지 못하고 캐릭터들을 중앙에 뭉쳐(Clustering) 놓거나 무작위로 배치한다.</p>
+
+<h2 id="-원인--맥락-context">💡 원인 / 맥락 (Context)</h2>
+<p>생성형 AI는 공간적 관계(Spatial Relationship)를 추상적인 단어(Diamond, Circle)보다 구체적인 <strong>위치 지시어</strong>나 <strong>좌표 개념</strong>으로 더 잘 이해한다.</p>
+
+<h2 id="-해결책--지침-solution--rule">✅ 해결책 / 지침 (Solution / Rule)</h2>
+<p>추상적인 도형 이름 대신 <strong>‘시계 방향(Clock Face)’</strong> 또는 <strong>‘절대 위치(Absolute Position)’</strong>를 사용하여 강제한다.</p>
+
+<ol>
+  <li><strong>위치 매핑:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Top Center (12 o'clock)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Bottom Center (6 o'clock)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Far Left (9 o'clock)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Far Right (3 o'clock)</code></li>
+    </ul>
+  </li>
+  <li><strong>간격 강제:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Widely spaced apart</code> (넓게 띄워라)</li>
+      <li><code class="language-plaintext highlighter-rouge">Do not cluster</code> (뭉치지 마라)</li>
+    </ul>
+  </li>
+  <li><strong>흐름 연결:</strong> 각 요소를 <code class="language-plaintext highlighter-rouge">Thick, curved arrows</code>로 연결하여 시선의 흐름(Cycle)을 만든다.</li>
+</ol>

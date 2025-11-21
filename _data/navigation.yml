@@ -7,7 +7,7 @@ main:
     url: /insights/
   - title: "코딩"
     url: /coding/
-    disabled: true
+    disabled: false
   - title: "디자인"
     url: /design/
     disabled: false

@@ -1,0 +1,46 @@
+<h2 id="-문제-problem--핵심-core">📌 문제 (Problem) / 핵심 (Core)</h2>
+<p>프롬프트 초반에 특정 예술 사조(예: <code class="language-plaintext highlighter-rouge">Corporate Memphis</code>)를 명확히 선언했음에도 불구하고, 결과물이 점차 <strong>‘일반적이고 평범한 스타일(Generic Style)’</strong>로 회귀하는 현상.</p>
+
+<ol>
+  <li><strong>상세 묘사의 간섭:</strong> 이후 섹션에서 구현 방식(예: <code class="language-plaintext highlighter-rouge">Geometric</code>)을 독립적으로 상세히 서술하면 메인 스타일이 잊혀짐.</li>
+  <li><strong>범용 키워드의 오염:</strong> <code class="language-plaintext highlighter-rouge">Flat</code>, <code class="language-plaintext highlighter-rouge">Simple</code>과 같이 학습 데이터가 방대한 범용적인 단어를 사용하면, AI가 이를 ‘평범한 클립아트’를 그리라는 신호로 강력하게 받아들여 메인 스타일(Memphis)의 독창성을 지워버림.</li>
+</ol>
+
+<h2 id="-원인--맥락-context">💡 원인 / 맥락 (Context)</h2>
+<ol>
+  <li><strong>토큰 최신성 편향 (Recency Bias):</strong> AI 모델은 프롬프트의 뒤쪽에 나오는 상세 묘사에 더 높은 가중치를 두는 경향이 있다.</li>
+  <li><strong>의미적 재정의 (Semantic Overwrite):</strong> 기술적 용어가 메인 장르와 연결되지 않은 채 독립적으로 서술되면, AI는 이를 새로운 지시로 해석하여 기존 스타일을 덮어쓴다.</li>
+  <li><strong>토큰 지배력 (Token Dominance):</strong> <code class="language-plaintext highlighter-rouge">Flat design</code>과 같은 일반적 용어는 학습 데이터 양이 압도적으로 많아, <code class="language-plaintext highlighter-rouge">Corporate Memphis</code> 같은 틈새(Niche) 스타일 토큰보다 가중치가 훨씬 높게 작용한다.</li>
+</ol>
+
+<h2 id="-해결책--지침-solution--rule">✅ 해결책 / 지침 (Solution / Rule)</h2>
+<p>기법(Technique)을 서술할 때, 그것이 <strong>메인 장르(Genre)의 하위 요소임</strong>을 상기시키고, 스타일을 오염시키는 <strong>범용적인 단어를 피해야 한다.</strong></p>
+
+<ol>
+  <li><strong>섹션 통합 (Grouping):</strong> 장르(Genre)와 기법(Technique)을 분리하지 말고, <strong><code class="language-plaintext highlighter-rouge">[Art Style]</code>이라는 하나의 섹션 안에서 묶어서 서술</strong>한다.
+    <ul>
+      <li><em>Bad:</em> <code class="language-plaintext highlighter-rouge">[Genre]</code> Corporate Memphis… (중간 생략) … <code class="language-plaintext highlighter-rouge">[Technique]</code> Geometric…</li>
+      <li><em>Good:</em> <code class="language-plaintext highlighter-rouge">[Art Style]</code> <strong>Corporate Memphis style rendered in lineless vector art.</strong> (기법을 장르의 수식어로 통합)</li>
+    </ul>
+  </li>
+  <li><strong>맥락 연결 (Contextual Linking):</strong> 기술적 용어를 쓸 때도 메인 스타일을 수식어로 붙여 제한한다.
+    <ul>
+      <li><em>Bad:</em> “Use simple geometric shapes.” (일반적인 기하학 도형 → 학습 만화 느낌)</li>
+      <li><em>Good:</em> “Use <strong>stylized geometric shapes typical of the Memphis style</strong>.” (멤피스 특유의 도형 → 힙한 느낌)</li>
+    </ul>
+  </li>
+  <li><strong>함축적 키워드 대체 (Replacing Loaded Keywords):</strong> 스타일을 평범하게 만드는 ‘포괄적 용어(Loaded Keyword)’를 금지하고, <strong>‘시각적 속성’으로 풀어서 서술</strong>한다.
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">Flat</code> 금지:</strong> 이 단어는 ‘딱딱한 비율의 아이콘’을 유발하므로 삭제.
+        <ul>
+          <li>-&gt; 대신 <strong><code class="language-plaintext highlighter-rouge">Lineless</code></strong>, <strong><code class="language-plaintext highlighter-rouge">Shapes defined by color blocks</code></strong>, <strong><code class="language-plaintext highlighter-rouge">No strokes</code></strong>로 대체.</li>
+        </ul>
+      </li>
+      <li><strong><code class="language-plaintext highlighter-rouge">Simple</code> 금지:</strong> 이 단어는 디테일을 과하게 삭제하므로 삭제.
+        <ul>
+          <li>-&gt; 대신 <strong><code class="language-plaintext highlighter-rouge">Minimalist features</code></strong>, <strong><code class="language-plaintext highlighter-rouge">Clean composition</code></strong>으로 대체.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>

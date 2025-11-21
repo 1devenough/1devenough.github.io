@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-11-16T18:34:13+09:00</updated><id>/feed.xml</id><title type="html">1DevEnough</title><entry><title type="html">AI로 기획부터 디자인 시스템까지 A-to-Z 워크플로우</title><link href="/design/ai-workflow-prd-to-design/" rel="alternate" type="text/html" title="AI로 기획부터 디자인 시스템까지 A-to-Z 워크플로우" /><published>2025-11-16T00:00:00+09:00</published><updated>2025-11-16T00:00:00+09:00</updated><id>/design/ai-workflow-prd-to-design</id><content type="html" xml:base="/design/ai-workflow-prd-to-design/"><![CDATA[<h1 id="1인-개발-워크플로우-a-to-z-ai-기획부터-디자인까지">1인 개발 워크플로우 A to Z: AI 기획부터 디자인까지</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://1devenough.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://1devenough.github.io/" rel="alternate" type="text/html" /><updated>2025-11-22T02:56:42+09:00</updated><id>https://1devenough.github.io/feed.xml</id><title type="html">1DevEnough</title><entry><title type="html">Slow Vibe Coding: AI와 느리게 일하며 효율을 높이는 방법 (Part 1)</title><link href="https://1devenough.github.io/coding/slow-vibe-coding-1/" rel="alternate" type="text/html" title="Slow Vibe Coding: AI와 느리게 일하며 효율을 높이는 방법 (Part 1)" /><published>2025-11-20T00:00:00+09:00</published><updated>2025-11-20T00:00:00+09:00</updated><id>https://1devenough.github.io/coding/slow-vibe-coding-1</id><content type="html" xml:base="https://1devenough.github.io/coding/slow-vibe-coding-1/"><![CDATA[<p class="page__lead">
+AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 높이는 방법
+</p>
+
+<p>이 글은 AI 코딩의 ‘혼돈’ 속에서 제가 겪은 시행착오와, 그 끝에 정착한 저만의 워크플로우 <strong>‘Slow Vibe Coding’</strong>에 대한 기록입니다. 무조건적인 속도 대신, 1인 개발자가 지치지 않고 AI와 오랫동안 협력할 수 있는 현실적인 방법을 공유합니다.</p>
+
+<hr />
+
+<h2 id="도입-ai-코딩의-혼돈-속에서-나만의-길-찾기">도입: AI 코딩의 혼돈 속에서 나만의 길 찾기</h2>
+
+<p>AI 코딩은 지금 가장 뜨거운 주제입니다. 누군가는 AI 에이전트를 적극적으로 활용하며 생산성을 극대화하고, 누군가는 여전히 AI가 생성한 코드를 불신합니다. 기대와 실망, 그리고 효율성에 대한 의문이 공존하는 ‘혼돈’의 시기입니다.</p>
+
+<p><img src="/assets/images/post/chaos_maze-2000w.webp" alt="AI 코딩의 혼돈" class="align-center" /></p>
+
+<p>저 역시 ChatGPT 유료 모델이 처음 나왔을 때 바로 구독하며 이 흐름에 뛰어들었습니다. 처음에는 작업자에서 감독자가 된 듯한, 초현대적으로 일하는 느낌에 감탄했지만 이내 LLM의 명백한 한계에 실망하기도 했습니다. 발전이 더딜 땐 구독을 계속 유지해야 하나 회의적인 생각마저 들었습니다. 하지만 AI 기반 코딩이 미래라는 믿음은 확고했습니다.</p>
+
+<p>수많은 시행착오 끝에, 저는 ‘속도’가 아닌 ‘지속 가능한 협력’에 초점을 맞춘 저만의 워크플로우를 찾았습니다. 저는 이것을 <strong>‘슬로우 바이브 코딩(Slow Vibe Coding)’</strong>이라고 부릅니다.</p>
+
+<p>이 워크플로우는 철학적으로 켄트 벡(Kent Beck)이 주창한 <strong>‘증강 코딩(Augmented Coding)’</strong>과 그 목표에 있어서 일맥상통합니다. 하지만 저는 AI와 협력하는 이 방식을 좀 더 직관적이고 대중적인 언어로 표현하고 싶었습니다.</p>
+
+<p>사실 저는 ‘바이브 코딩’이라는 표현에 다소 양가적인 감정이 있습니다. 자칫 기술적 이해 없이도 무언가를 뚝딱 만들어낼 수 있다는 환상을 심어줄 수 있기 때문입니다. 기반 없는 속도전은 지속 가능하지 않습니다. 하지만 역설적으로, 기술적 이해가 단단히 뒷받침된다면 ‘바이브(Vibe)’를 타는 흐름 자체는 매우 효율적인 작업 방식이 될 수 있습니다.</p>
+
+<p>기술적 깊이를 챙기며 천천히 가되(Slow), 몰입의 즐거움(Vibe)은 놓치지 않겠다는 의미. 이것이 제가 <strong>‘슬로우 바이브 코딩(Slow Vibe Coding)’</strong>이라고 이름을 붙인 이유입니다.</p>
+
+<p>이 글에서는 제가 어떻게 AI와 ‘느리게’ 일하며 오히려 더 높은 효율을 달성하는지 공유하고자 합니다.</p>
+
+<hr />
+
+<h2 id="핵심-원칙-1-ai-에이전트가-아닌-가상-팀을-만듭니다">핵심 원칙 1: AI 에이전트가 아닌 ‘가상 팀’을 만듭니다</h2>
+
+<p>‘Slow Vibe Coding’의 첫 번째 원칙은 단일 AI에게 모든 것을 맡기지 않는 것입니다. 저는 여러 개의 제미나이(Gemini) 대화창을 열고 각각에게 명확한 역할을 부여합니다. 예를 들어, 한 창은 <strong>‘기획자’</strong>, 다른 창은 <strong>‘아키텍트’</strong>, 또 다른 창은 <strong>‘코더’</strong>가 됩니다. 이렇게 AI로 <strong>‘가상 팀’</strong>을 구성하는 방식입니다.</p>
+
+<p><img src="/assets/images/post/a_team_of_human_and_ai-2000w.webp" alt="AI와 가상의 팀을 구성" class="align-center" /></p>
+
+<p>이 방법은 두 가지 명확한 장점이 있습니다.</p>
+
+<ul>
+  <li><strong>대화의 복잡도를 낮춥니다.</strong> 하나의 대화창에서 기획, 설계, 코딩을 모두 다루면 맥락이 섞이고 대화가 복잡해집니다. 역할을 분리하면 각 대화창은 단순하고 선형적인 흐름을 유지할 수 있습니다.</li>
+  <li><strong>LLM의 환각(Hallucination)을 지연시킵니다.</strong> 복잡한 맥락은 LLM이 엉뚱한 답을 내놓는 환각 현상을 유발하는 주요 원인입니다. 역할을 분리해 대화를 단순하게 유지하면 환각 발생 시점을 늦출 수 있습니다. 환각이 발생하면 결국 대화창을 다시 만들고 LLM에게 맥락을 이해시키기 위한 시간 비용이 발생하는데, 이 접근법은 그 비용을 최소화합니다.</li>
+</ul>
+
+<hr />
+
+<h2 id="핵심-원칙-2-코드보다-논의에-집중합니다">핵심 원칙 2: 코드보다 ‘논의’에 집중합니다</h2>
+
+<p>두 번째 원칙은 코드를 바로 생성하기 전에, 문제 해결 방법에 대해 AI와 충분히 <strong>‘논의’</strong>하는 것입니다. 저는 가상 팀의 ‘기획자’ 및 ‘아키텍트’ AI와 함께 해결 방법에 논리적 허점이 없는지 집요하게 토론합니다. 인간인 저와 AI 모두가 “이 방법이 합리적이다”라고 동의할 때까지 이 과정은 계속됩니다.</p>
+
+<p>이 논의의 최종 결과물은 단순한 대화 로그가 아닌, 명확한 <strong>‘구현 명세서’</strong>입니다.</p>
+
+<p>물론 이 명세서에는 핵심 로직이나 구체적인 코드 예시가 포함됩니다. 하지만 이것은 AI가 던져주는 ‘완성된 전체 코드 덩어리’와는 다릅니다. 그 코드를 <strong>‘어떤 맥락에서, 어떻게 기존 코드에 적용해야 하는지’</strong>를 설명하는 상세한 기술 지침서에 가깝습니다. 이것의 구체적인 양식과 활용법에 대해서는 추후 다른 글에서 더 자세히 다루겠습니다.</p>
+
+<p>이것이 바로 제가 ‘느리게’ 일하는 방식의 핵심입니다. 당장 코드를 얻는 것보다, 올바른 방향으로 가고 있다는 확신을 얻는 데 시간을 투자하는 것이 장기적으로 훨씬 효율적입니다.</p>
+
+<p><img src="/assets/images/post/discussion_to_spec.webp" alt="논의를 통해 구현 명세서를 작성" class="align-center" /></p>
+
+<hr />
+
+<h2 id="핵심-원칙-3-무조건적인-자동화를-거부합니다">핵심 원칙 3: 무조건적인 자동화를 거부합니다</h2>
+
+<p>AI 에이전트가 대량의 코드를 생성하고 인간은 그저 리뷰만 하면 될 것이라는 생각은 매력적입니다. 하지만 여기에는 함정이 있습니다. 바로 <strong>‘리뷰 피로도’</strong>입니다.</p>
+
+<p>인간은 AI와 달리 리뷰에 상당한 정신적 에너지를 소모하며, 피로도를 느낍니다. AI가 쏟아내는 수많은 코드를 검토하고 디버깅하는 과정은 개발자를 빠르게 지치게 만듭니다. 결국 이런 방식은 초기 속도는 빠를지 몰라도, 인간의 피로도를 높여 전체 프로젝트의 효율을 떨어뜨리는 역설을 낳습니다. 이것이 제가 무작정 코드를 생성하는 대신, 사전에 충분한 논의를 거쳐 명확한 ‘구현 명세서’를 도출하는 접근법을 고수하는 이유입니다.</p>
+
+<p>물론 완성된 ‘구현 명세서’를 코드로 변환하는 작업은 제미나이 CLI나 IDE 통합 에이전트에 위임할 수도 있습니다. 하지만 불과 얼마 전까지만 해도 이 도구들의 기술적 완성도가 기대에 미치지 못하여 제가 직접 코드에 적용할 때가 많았습니다.</p>
+
+<p>그러나 최근 제미나이 3.0이 출시되면서 상황이 바뀌었습니다. 이제는 제미나이 CLI나 <strong>‘안티 그래비티(Anti-Gravity)’</strong>와 같은 고성능 도구를 활용해, 이 마지막 구현 단계까지 효율화하는 방안을 다시 긍정적으로 검토하고 있습니다.</p>
+
+<hr />
+
+<h2 id="핵심-원칙-4-가장-비싼-모델-대신-충분히-좋은-모델을-선택합니다">핵심 원칙 4: 가장 비싼 모델 대신 ‘충분히 좋은’ 모델을 선택합니다</h2>
+
+<p>저는 200 달러짜리 최고 사양 모델 대신, 30달러짜리 제미나이 Pro를 메인 도구로 사용합니다. 여기에는 두 가지 실용적인 이유가 있습니다.</p>
+
+<ul>
+  <li><strong>첫째, 비싼 도구가 주는 심리적 압박감 때문입니다.</strong> 고가의 구독료를 내면 ‘쉬지 않고 돌려야 본전을 뽑는다’는 압박을 받게 되고, 결국 제 흐름을 잃고 도구에 끌려다니게 되는 경험을 했습니다.</li>
+  <li><strong>둘째, 특정 벤더에 종속되고 싶지 않았기 때문입니다.</strong> 저는 한때 ChatGPT 최상위 모델을 쓰면서 결과물을 더블체크하기 위해 무료 제미나이 Pro를 병행했습니다. 그런데 불과 몇 달 만에 제미나이의 코딩 능력이 놀라울 정도로 발전해 최상위 모델을 거의 따라잡는 것을 직접 목격했습니다. 특정 도구에 얽매이기보다, ‘충분히 좋은’ 성능을 내면서 합리적인 비용의 도구를 선택하는 것이 현명하다고 판단했습니다.</li>
+</ul>
+
+<p>정리하자면, AI 벤더에 종속되지 않으면서 적은 비용으로 내 흐름을 잃지 않고 AI를 사용해 최대 효율을 내는 것이 제 워크플로우의 목표입니다.</p>
+
+<hr />
+
+<h2 id="그래서-개발자의-새로운-역할은">그래서 개발자의 새로운 역할은?</h2>
+
+<p>‘Slow Vibe Coding’ 워크플로우에서 인간 개발자의 역할은 단순히 코드를 짜는 사람에서 벗어나 훨씬 다층적으로 변합니다.</p>
+
+<ul>
+  <li><strong>감독자 (Supervisor):</strong> AI가 생성한 결과물을 리뷰하고, 논리적 허점이나 개선점을 찾아 보완을 지시합니다.</li>
+  <li><strong>협력자 (Collaborator):</strong> AI가 설계한 아키텍처를 함께 리뷰하고, 테스트하며, 때로는 직접 코딩에 참여해 결과물을 완성합니다.</li>
+  <li><strong>중재자 (Mediator):</strong> ‘기획자’ AI, ‘아키텍트’ AI, ‘코더’ AI 등 각자의 역할을 수행하는 AI들 간의 의견을 조율하고 최종적인 방향을 결정합니다.</li>
+</ul>
+
+<p>개발자는 더 이상 키보드 앞에서 모든 것을 해결하는 사람이 아니라, AI라는 가상 팀을 이끌어 최상의 결과물을 만들어내는 총괄 책임자가 되는 것입니다.</p>
+
+<hr />
+
+<h2 id="결론-속도보다-중요한-것">결론: 속도보다 중요한 것</h2>
+
+<p><strong>‘Slow Vibe Coding’</strong>은 단순히 느리게 일하자는 의미가 아닙니다. AI와의 협력 방식을 인간 중심으로 재설계하여, 반짝이는 속도가 아닌 지속 가능한 효율성을 추구하는 방법론입니다. AI에게 모든 것을 맡기고 수동적으로 리뷰하는 대신, 명확한 역할을 부여하고 충분히 논의하며 함께 결과물을 만들어가는 능동적인 협력 모델입니다.</p>
+
+<p>AI 코딩의 미래는 절대적인 속도가 아니라, 인간과 AI의 <strong>‘협력 방식’</strong>을 어떻게 설계하느냐에 달려있는 것은 아닐까요?</p>
+
+<hr />
+
+<h3 id="-다음-글-예고-slow-vibe-coding-실전-가이드-part-2">🚀 다음 글 예고: ‘Slow Vibe Coding: 실전 가이드 (Part 2)’</h3>
+
+<p>이번 글에서 ‘Slow Vibe Coding’의 개념을 소개했습니다. 다음 글에서는 <strong>실제 ‘가상 AI 팀’을 어떻게 구축하고 운용하는지</strong> 구체적인 방법을 다룹니다.</p>
+
+<p>제가 현재 진행 중인 프로젝트 ‘Seed’를 진행하며 실제로 사용하고 있는 <strong>‘AI 아키텍트’와 ‘AI 코더’의 역할별 프롬프트(Prompt)</strong>와, 그들과의 티키타카를 통해 완성된 <strong>‘실전 구현 명세서’</strong>의 실제 예시를 공유할 예정입니다.</p>
+
+<hr />]]></content><author><name></name></author><category term="coding" /><summary type="html"><![CDATA[AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 높이는 'Slow Vibe Coding' 방법론을 소개합니다.]]></summary></entry><entry><title type="html">AI로 기획부터 디자인 시스템까지 A-to-Z 워크플로우</title><link href="https://1devenough.github.io/design/ai-workflow-prd-to-design/" rel="alternate" type="text/html" title="AI로 기획부터 디자인 시스템까지 A-to-Z 워크플로우" /><published>2025-11-16T00:00:00+09:00</published><updated>2025-11-16T00:00:00+09:00</updated><id>https://1devenough.github.io/design/ai-workflow-prd-to-design</id><content type="html" xml:base="https://1devenough.github.io/design/ai-workflow-prd-to-design/"><![CDATA[<p class="page__lead">
+# 1인 개발 워크플로우 A to Z: AI 기획부터 디자인까지
+</p>
 
 <p>이 콘텐츠는 ‘바이브랩스’ 채널의 ‘포트폴리오 만들기’ 시리즈 영상 2편(PRD, Stitch)을 기반으로 합니다. 1인 개발자의 가장 큰 장벽인 ‘기획(PRD)’부터 ‘디자인 시스템’까지 AI(Notion AI, Stitch)로 완성하는 A-to-Z 워크플로우의 핵심 인사이트를 큐레이션했습니다.</p>
 
@@ -383,7 +495,9 @@
   </div>
 </div>
 
-<hr />]]></content><author><name></name></author><category term="design" /><summary type="html"><![CDATA[1인 개발자의 가장 큰 장벽인 '기획'과 '디자인'을 AI(Notion, Stitch)로 한 번에 해결하는 실용적인 워크플로우입니다.]]></summary></entry><entry><title type="html">‘알라미’ 사례 연구 분석</title><link href="/insights/alarmy-case-study/" rel="alternate" type="text/html" title="‘알라미’ 사례 연구 분석" /><published>2025-11-13T00:00:00+09:00</published><updated>2025-11-13T00:00:00+09:00</updated><id>/insights/alarmy-case-study</id><content type="html" xml:base="/insights/alarmy-case-study/"><![CDATA[<h1 id="알라미는-어떻게-1억-유저를-달성했나">‘알라미’는 어떻게 1억 유저를 달성했나</h1>
+<hr />]]></content><author><name></name></author><category term="design" /><summary type="html"><![CDATA[1인 개발자의 가장 큰 장벽인 '기획'과 '디자인'을 AI(Notion, Stitch)로 한 번에 해결하는 실용적인 워크플로우입니다.]]></summary></entry><entry><title type="html">‘알라미’ 사례 연구 분석</title><link href="https://1devenough.github.io/insights/alarmy-case-study/" rel="alternate" type="text/html" title="‘알라미’ 사례 연구 분석" /><published>2025-11-13T00:00:00+09:00</published><updated>2025-11-13T00:00:00+09:00</updated><id>https://1devenough.github.io/insights/alarmy-case-study</id><content type="html" xml:base="https://1devenough.github.io/insights/alarmy-case-study/"><![CDATA[<p class="page__lead">
+# '알라미'는 어떻게 1억 유저를 달성했나
+</p>
 
 <p>이 콘텐츠는 ‘조코딩’ 채널의 팟캐스트 인터뷰 영상을 기반으로 합니다. 1인 개발로 시작해 연 매출 337억을 달성한 ‘알라미’ 신재명 대표의 여정을 4가지 핵심 전략으로 분석했습니다.</p>
 

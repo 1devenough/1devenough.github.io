@@ -34,19 +34,19 @@ curated_picks:
 # _includes/feature_row.html 이 데이터를 사용함
 #################################################################
 feature_row:
-  - image_path: /assets/images/index/chart-simple-solid-full.svg # Placeholder
+  - image_path: /assets/images/common/chart-simple-solid-full.svg # Placeholder
     title: "AI 디자인"
     excerpt: "Stitch, Midjourney 등 AI를 활용한 디자인 자동화 팁."
     url: "/design/ai-design/" # (Future page)
     btn_label: "더 알아보기"
     disabled: true
-  - image_path: /assets/images/index/chart-simple-solid-full.svg # Placeholder
+  - image_path: /assets/images/common/chart-simple-solid-full.svg # Placeholder
     title: "UI/UX 원칙"
     excerpt: "1인 개발자가 바로 적용하는 실용적인 UI/UX 원칙과 팁."
     url: "/design/ui-ux-tips/" # (Future page)
     btn_label: "더 알아보기"
     disabled: true
-  - image_path: /assets/images/index/chart-simple-solid-full.svg # Placeholder
+  - image_path: /assets/images/common/chart-simple-solid-full.svg # Placeholder
     title: "디자인 리소스"
     excerpt: "무료 아이콘, 폰트, CSS 라이브러리 등 큐레이션."
     url: "/design/resources/" # (Future page)

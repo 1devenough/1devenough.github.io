@@ -7,7 +7,7 @@ layout: single
 categories:
   - insights
 
-show_title: false
+show_title: true
 
 #header:
 #  image: /assets/images/alarmy-thumbnail.jpg # (예시 이미지 경로)
@@ -19,7 +19,9 @@ comments: true
 show_explore_more: true
 ---
 
+<p class="page__lead">
 # '알라미'는 어떻게 1억 유저를 달성했나
+</p>
 
 이 콘텐츠는 '조코딩' 채널의 팟캐스트 인터뷰 영상을 기반으로 합니다. 1인 개발로 시작해 연 매출 337억을 달성한 '알라미' 신재명 대표의 여정을 4가지 핵심 전략으로 분석했습니다.
 

@@ -17,38 +17,44 @@ header:
 # 2. "START HERE" (Curated Picks)
 # Data is consumed by _includes/curated_row.html
 #################################################################
-curated_title: "Start Here: Recommended Guides"
+curated_title: "시작 가이드:"
 curated_picks:
-  - title: "1인 개발 기술 스택 선택 가이드"
-    excerpt: "어떤 기술로 시작해야 할지 막막한 분들을 위한 첫 가이드입니다."
-    url: "/coding/tech-stack-guide/"
-  - title: "Firebase로 10분 만에 백엔드 구축하기"
-    excerpt: "서버 없이 앱을 만드는 가장 빠른 방법을 소개합니다."
-    url: "/coding/firebase-basics/"
-  - title: "TBD: Post 3 Title"
-    excerpt: "TBD: Post 3 Excerpt"
-    url: "#"
+  - title: "Slow Vibe Coding: AI 코딩의 혼돈을 넘어서"
+    excerpt: "빠른 속도보다 중요한 '지속가능성'. 1인 개발자가 AI와 '가상 팀'을 이뤄 효율적으로 협업하는 'Slow Vibe Coding' 워크플로우를 제안합니다."
+    url: "/coding/slow-vibe-coding-1/"
+  # - title: "1인 개발 기술 스택 선택 가이드"
+  #   excerpt: "어떤 기술로 시작해야 할지 막막한 분들을 위한 첫 가이드입니다."
+  #   url: "/coding/tech-stack-guide/"
+  # - title: "Firebase로 10분 만에 백엔드 구축하기"
+  #   excerpt: "서버 없이 앱을 만드는 가장 빠른 방법을 소개합니다."
+  #   url: "/coding/firebase-basics/"
+  # - title: "TBD: Post 3 Title"
+  #   excerpt: "TBD: Post 3 Excerpt"
+  #   url: "#"
 
 #################################################################
 # 3. "TOPIC EXPLORER" (Sub-categories)
 # Data is consumed by _includes/feature_row.html
 #################################################################
 feature_row:
-  - image_path: /assets/images/index/code-solid-full.svg # Placeholder
-    title: "Frameworks"
+  - image_path: /assets/images/common/code-solid-full.svg # Placeholder
+    title: "프레임웍"
     excerpt: "React, Svelte, Flutter, etc."
     url: "/coding/frameworks/" # (Future page)
-    btn_label: "Learn More"
-  - image_path: /assets/images/index/code-solid-full.svg # Placeholder
-    title: "Backend & Infra"
+    btn_label: "더 알아보기"
+    disabled: true
+  - image_path: /assets/images/common/code-solid-full.svg # Placeholder
+    title: "백엔드 & 인프라"
     excerpt: "Firebase, Supabase, Vercel."
     url: "/coding/backend/" # (Future page)
-    btn_label: "Learn More"
-  - image_path: /assets/images/index/code-solid-full.svg # Placeholder
-    title: "Dev Tools"
+    btn_label: "더 알아보기"
+    disabled: true
+  - image_path: /assets/images/common/code-solid-full.svg # Placeholder
+    title: "개발 도구"
     excerpt: "VS Code, Git, CI/CD tips."
     url: "/coding/tools/" # (Future page)
-    btn_label: "Learn More"
+    btn_label: "더 알아보기"
+    disabled: true
 ---
 
 {% include curated_row.html %}
@@ -60,7 +66,7 @@ feature_row:
 <hr>
 
 <div class="latest-posts-row">
-  <h2 class="archive__subtitle">Latest Coding Posts</h2>
+  <h2 class="archive__subtitle">최신 코딩 아티클</h2>
 
 {% assign category_name = "coding" %}
 
@@ -73,7 +79,7 @@ feature_row:
   <p style="text-align: right; margin-top: 1em;">
     <a href="{{ site.category_archive_path | default: '/categories/' | relative_url }}{{ category_name }}/" 
        class="btn btn--primary">
-      All Coding Posts &rarr;
+      모든 코딩 아티클 보기 &rarr;
     </a>
   </p>
 </div>
