@@ -16,6 +16,8 @@ main:
     disabled: true
   - title: "모든 글"
     url: /archive/
+  - title: "게시판"
+    url: https://github.com/1devenough/1devenough.github.io/discussions    
   - title: "소개"
     url: /about/
     disabled: false
