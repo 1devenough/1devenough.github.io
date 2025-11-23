@@ -25,6 +25,9 @@ header:
 #################################################################
 curated_title: "시작 가이드: 추천 인사이트"
 curated_picks:
+  - title: "'Canva' 사례 연구 분석"
+    excerpt: "'1인 개발자, '기능' 너머의 '비전'을 보다: Canva CEO에게 배운 것들 (Part 1)"
+    url: "/insights/canva-case-study/" 
   - title: "'알라미' 사례 연구 분석"
     excerpt: "성공적인 1인 개발 앱 '알라미'의 핵심 전략을 분석합니다."
     url: "/insights/alarmy-case-study/" 

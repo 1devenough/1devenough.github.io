@@ -466,3 +466,44 @@
     /* 다크 모드에서는 밝은 회색 */
   }
 }
+
+/* --- Editor's Note 위젯 --- */
+.editors-note {
+  background-color: #E6F7ED;
+  /* 퀴즈 정답 배경색과 동일한 연한 민트 */
+  border: 2px dashed #A3D4B6;
+  /* 퀴즈 정답 테두리와 동일한 민트색 점선 */
+  border-radius: 12px;
+  padding: 1.5em;
+  margin: 2em 0;
+  position: relative;
+}
+
+.editors-note__title {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #2E7D32;
+  /* 진한 녹색 텍스트 */
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.editors-note__title i {
+  color: #FFB300;
+  /* 전구 아이콘은 노란색 계열로 강조 */
+}
+
+/* 노트 내부 콘텐츠 스타일 조정 */
+.editors-note__content {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #333;
+}
+
+.editors-note__content p:last-child {
+  margin-bottom: 0;
+  /* 박스 내부 마지막 문단의 여백 제거 */
+}

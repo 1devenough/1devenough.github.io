@@ -1,0 +1,9 @@
+<div class="editors-note">
+    <h4 class="editors-note__title">
+        <i class="fas fa-lightbulb"></i>
+        {{ include.title | default: "Editor's Note" }}
+    </h4>
+    <div class="editors-note__content">
+        {{ include.content | markdownify }}
+    </div>
+</div>
