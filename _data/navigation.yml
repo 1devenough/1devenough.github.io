@@ -18,7 +18,6 @@ main:
     url: /archive/
   - title: "게시판"
     url: https://github.com/1devenough/1devenough.github.io/discussions    
-  - title: "소개"
-    url: /about/
-    disabled: false
-    
+  - image: "/assets/images/1d-logo.webp"
+    image_alt: "1DevEnough 소개"
+    url: /about/    

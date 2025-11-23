@@ -92,58 +92,91 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/images/index/logo.png" alt=""></a>
+        <a class="site-logo" href="/"><img src="/assets/images/index/logo.png" alt=""></a>
         
         <a class="site-title" href="/">1DevEnough</a>
         <ul class="visible-links"><li class="masthead__menu-item ">
-              
-              <a href="/">
-                홈
-              </a>
 
-            </li><li class="masthead__menu-item ">
-              
-              <a href="/insights/">
-                인사이트
-              </a>
+            <a href="/"  >
 
-            </li><li class="masthead__menu-item ">
               
-              <a href="/coding/">
-                코딩
-              </a>
-
-            </li><li class="masthead__menu-item ">
+              홈
               
-              <a href="/design/">
-                디자인
-              </a>
 
-            </li><li class="masthead__menu-item masthead__menu-item--disabled">
+            </a>
+
+          </li><li class="masthead__menu-item ">
+
+            <a href="/insights/"  >
+
               
-              <a >
-                마케팅
-              </a>
-
-            </li><li class="masthead__menu-item ">
+              인사이트
               
-              <a href="/archive/">
-                모든 글
-              </a>
 
-            </li><li class="masthead__menu-item ">
+            </a>
+
+          </li><li class="masthead__menu-item ">
+
+            <a href="/coding/"  >
+
               
-              <a href="https://github.com/1devenough/1devenough.github.io/discussions">
-                게시판
-              </a>
-
-            </li><li class="masthead__menu-item ">
+              코딩
               
-              <a href="/about/">
-                소개
-              </a>
 
-            </li></ul>
+            </a>
+
+          </li><li class="masthead__menu-item ">
+
+            <a href="/design/"  >
+
+              
+              디자인
+              
+
+            </a>
+
+          </li><li class="masthead__menu-item masthead__menu-item--disabled">
+
+            <a  >
+
+              
+              마케팅
+              
+
+            </a>
+
+          </li><li class="masthead__menu-item ">
+
+            <a href="/archive/"  >
+
+              
+              모든 글
+              
+
+            </a>
+
+          </li><li class="masthead__menu-item ">
+
+            <a href="https://github.com/1devenough/1devenough.github.io/discussions"  >
+
+              
+              게시판
+              
+
+            </a>
+
+          </li><li class="masthead__menu-item ">
+
+            <a href="/about/"  style="display: flex; align-items: center; height: 100%; padding-top: 0; padding-bottom: 0;" >
+
+              
+              <img src="/assets/images/1d-logo.webp" alt="1DevEnough 소개"
+                style="height: 32px; width: auto;">
+              
+
+            </a>
+
+          </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Menu</span>
@@ -154,7 +187,6 @@
     </div>
   </div>
 </div>
-
 
     <div class="initial-content">
       
@@ -192,7 +224,21 @@ AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 
 
 <hr />
 
-<h2 id="도입-ai-코딩의-혼돈-속에서-나만의-길-찾기">도입: AI 코딩의 혼돈 속에서 나만의 길 찾기</h2>
+<div class="page-toc">
+
+  <ul>
+    <li><a href="#introduction">도입: AI 코딩의 혼돈 속에서 나만의 길 찾기</a></li>
+    <li><a href="#principle-1">핵심 원칙 1: AI 에이전트가 아닌 ‘가상 팀’을 만듭니다</a></li>
+    <li><a href="#principle-2">핵심 원칙 2: 코드보다 ‘논의’에 집중합니다</a></li>
+    <li><a href="#principle-3">핵심 원칙 3: 무조건적인 자동화를 거부합니다</a></li>
+    <li><a href="#principle-4">핵심 원칙 4: 가장 비싼 모델 대신 ‘충분히 좋은’ 모델을 선택합니다</a></li>
+    <li><a href="#role">그래도 개발자의 새로운 역할은?</a></li>
+    <li><a href="#conclusion">결론: 속도보다 중요한 것</a></li>
+  </ul>
+
+</div>
+
+<h2 id="introduction">도입: AI 코딩의 혼돈 속에서 나만의 길 찾기</h2>
 
 <p>AI 코딩은 지금 가장 뜨거운 주제입니다. 누군가는 AI 에이전트를 적극적으로 활용하며 생산성을 극대화하고, 누군가는 여전히 AI가 생성한 코드를 불신합니다. 기대와 실망, 그리고 효율성에 대한 의문이 공존하는 ‘혼돈’의 시기입니다.</p>
 
@@ -212,7 +258,7 @@ AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 
 
 <hr />
 
-<h2 id="핵심-원칙-1-ai-에이전트가-아닌-가상-팀을-만듭니다">핵심 원칙 1: AI 에이전트가 아닌 ‘가상 팀’을 만듭니다</h2>
+<h2 id="principle-1">핵심 원칙 1: AI 에이전트가 아닌 ‘가상 팀’을 만듭니다</h2>
 
 <p>‘Slow Vibe Coding’의 첫 번째 원칙은 단일 AI에게 모든 것을 맡기지 않는 것입니다. 저는 여러 개의 제미나이(Gemini) 대화창을 열고 각각에게 명확한 역할을 부여합니다. 예를 들어, 한 창은 <strong>‘기획자’</strong>, 다른 창은 <strong>‘아키텍트’</strong>, 또 다른 창은 <strong>‘코더’</strong>가 됩니다. 이렇게 AI로 <strong>‘가상 팀’</strong>을 구성하는 방식입니다.</p>
 
@@ -227,7 +273,7 @@ AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 
 
 <hr />
 
-<h2 id="핵심-원칙-2-코드보다-논의에-집중합니다">핵심 원칙 2: 코드보다 ‘논의’에 집중합니다</h2>
+<h2 id="principle-2">핵심 원칙 2: 코드보다 ‘논의’에 집중합니다</h2>
 
 <p>두 번째 원칙은 코드를 바로 생성하기 전에, 문제 해결 방법에 대해 AI와 충분히 <strong>‘논의’</strong>하는 것입니다. 저는 가상 팀의 ‘기획자’ 및 ‘아키텍트’ AI와 함께 해결 방법에 논리적 허점이 없을 때까지 집요하게 토론합니다. 인간인 저와 AI 모두가 “이 방법이 합리적이다”라고 동의할 때까지 이 과정은 계속됩니다.</p>
 
@@ -241,7 +287,7 @@ AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 
 
 <hr />
 
-<h2 id="핵심-원칙-3-무조건적인-자동화를-거부합니다">핵심 원칙 3: 무조건적인 자동화를 거부합니다</h2>
+<h2 id="principle-3">핵심 원칙 3: 무조건적인 자동화를 거부합니다</h2>
 
 <p>AI 에이전트가 대량의 코드를 생성하고 인간은 그저 리뷰만 하면 될 것이라는 생각은 매력적입니다. 하지만 여기에는 함정이 있습니다. 바로 <strong>‘리뷰 피로도’</strong>입니다.</p>
 
@@ -253,7 +299,7 @@ AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 
 
 <hr />
 
-<h2 id="핵심-원칙-4-가장-비싼-모델-대신-충분히-좋은-모델을-선택합니다">핵심 원칙 4: 가장 비싼 모델 대신 ‘충분히 좋은’ 모델을 선택합니다</h2>
+<h2 id="principle-4">핵심 원칙 4: 가장 비싼 모델 대신 ‘충분히 좋은’ 모델을 선택합니다</h2>
 
 <p>저는 200 달러짜리 최고 사양 모델 대신, 30달러짜리 제미나이 Pro를 메인 도구로 사용합니다. 여기에는 두 가지 실용적인 이유가 있습니다.</p>
 
@@ -266,7 +312,7 @@ AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 
 
 <hr />
 
-<h2 id="그래서-개발자의-새로운-역할은">그래서 개발자의 새로운 역할은?</h2>
+<h2 id="role">그래서 개발자의 새로운 역할은?</h2>
 
 <p>‘Slow Vibe Coding’ 워크플로우에서 인간 개발자의 역할은 단순히 코드를 짜는 사람에서 벗어나 훨씬 다층적으로 변합니다.</p>
 
@@ -280,7 +326,7 @@ AI 코딩, 빠르게만 하려고 하셨나요? '느리게' 일하며 효율을 
 
 <hr />
 
-<h2 id="결론-속도보다-중요한-것">결론: 속도보다 중요한 것</h2>
+<h2 id="conclusion">결론: 속도보다 중요한 것</h2>
 
 <p><strong>‘Slow Vibe Coding’</strong>은 단순히 느리게 일하자는 의미가 아닙니다. AI와의 협력 방식을 인간 중심으로 재설계하여, 반짝이는 속도가 아닌 지속 가능한 효율성을 추구하는 방법론입니다. AI에게 모든 것을 맡기고 수동적으로 리뷰하는 대신, 명확한 역할을 부여하고 충분히 논의하며 함께 결과물을 만들어가는 능동적인 협력 모델입니다.</p>
 

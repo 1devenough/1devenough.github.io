@@ -7,7 +7,7 @@ layout: single
 categories:
   - design
 
-show_title: false
+show_title: true
 
 #header:
 #  image: /assets/images/alarmy-thumbnail.jpg # (예시 이미지 경로)
@@ -20,10 +20,10 @@ show_explore_more: true
 ---
 
 <p class="page__lead">
-# 1인 개발 워크플로우 A to Z: AI 기획부터 디자인까지
+1인 개발 워크플로우 A to Z: AI 기획부터 디자인까지
 </p>
 
-이 콘텐츠는 '바이브랩스' 채널의 '포트폴리오 만들기' 시리즈 영상 2편(PRD, Stitch)을 기반으로 합니다. 1인 개발자의 가장 큰 장벽인 '기획(PRD)'부터 '디자인 시스템'까지 AI(Notion AI, Stitch)로 완성하는 A-to-Z 워크플로우의 핵심 인사이트를 큐레이션했습니다.
+이 콘텐츠는 '[**바이브랩스**](https://www.youtube.com/@바이브랩스){: target="_blank"}' 채널의 **'포트폴리오 만들기'** 시리즈 영상 2편(PRD, Stitch)을 기반으로 합니다. 1인 개발자의 가장 큰 장벽인 **'기획(PRD)'**부터 **'디자인 시스템'**까지 **AI(Notion AI, Stitch)**로 완성하는 A-to-Z 워크플로우로 큐레이션했습니다.
 
 ## Part 1: AI와 '티키타카'하며 '살아있는' 기획서(PRD) 만들기
 {% include video provider="youtube" id="Vvr-LT4A2Wg" %}
@@ -52,16 +52,18 @@ show_explore_more: true
     <div id="tab-pane-1" class="tab-pane">
       <div class="tab-pane-content" markdown="1">
 
-### 1인 개발자 워크플로우 A to Z: AI로 '기획서'부터 '디자인 시스템'까지 완성하는 법
+# 1인 개발자 워크플로우 A to Z: AI로 '기획서'부터 '디자인 시스템'까지 완성하는 법
 
 1인 개발자는 코딩뿐만 아니라 '기획'과 '디자인'이라는 거대한 장벽을 홀로 넘어야 합니다. "내가 뭘 원하는지조차 정의하기 힘들고", 디자인 감각이 없어('똥손') 아이디어를 시각화하지 못합니다.
 
-이 콘텐츠는 '바이브랩스' 채널의 '포트폴리오 만들기' 시리즈 영상 2편(PRD, Stitch)을 기반으로 합니다. 1인 개발자의 가장 큰 장벽인 '기획(PRD)'부터 '디자인 시스템'까지 AI(Notion AI, Stitch)로 완성하는 A-to-Z 워크플로우의 핵심 인사이트를 큐레이션했습니다.
-
----
+<div class="page-toc" markdown="1">
 
 * [Part 1: AI와 '티키타카'하며 '살아있는' 기획서(PRD) 만들기](#part-1)
 * [Part 2: AI에게 '기획서'를 던져서 '디자인 시스템'까지 추출하기](#part-2)
+
+</div>
+
+---
 
 ## Part 1: AI와 '티키타카'하며 '살아있는' 기획서(PRD) 만들기
 {: #part-1 }
