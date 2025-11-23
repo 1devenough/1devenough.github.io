@@ -1,7 +1,7 @@
 ---
 # _posts/insights/2025-11-13-alarmy-case-study.md
 
-title: "'1인 개발자, '기능' 너머의 '비전'을 보다: Canva CEO에게 배운 것들 (Part 1)"
+title: "1인 개발자, '기능' 너머의 '비전'을 보다: Canva CEO에게 배운 것들 (Part 1)"
 excerpt: "유니콘 기업의 성공담이 오늘의 버그를 잡는 1인 개발자에게 어떤 의미가 있을까요? 기능 구현을 넘어 거대한 비전을 현실로 만드는 3가지 실전 마인드셋을 공유합니다."
 layout: single
 categories:

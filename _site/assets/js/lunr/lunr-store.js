@@ -17,7 +17,7 @@ var store = [{
         "url": "/coding/slow-vibe-coding-1/",
         "teaser": null
       },{
-        "title": "'1인 개발자, '기능' 너머의 '비전'을 보다: Canva CEO에게 배운 것들 (Part 1)",
+        "title": "1인 개발자, '기능' 너머의 '비전'을 보다: Canva CEO에게 배운 것들 (Part 1)",
         "excerpt":"유니콘 기업의 성공담이 당장 기능 구현이나 버그 잡기에 급급한 1인 개발자에게 어떤 의미가 있을까요? 기능 구현을 넘어 거대한 비전을 현실로 만드는 3가지 실전 마인드셋을 공유합니다. 이 콘텐츠는 ‘Lenny’s Podcast’ 채널의 팟캐스트 인터뷰 영상을 기반으로 합니다. 멜라니 퍼킨스는 현재 61조 7,000억 원 이상의 기업 가치를 지닌 Canva의 CEO이자 공동 창립자입니다. Canva는...","categories": ["insights"],
         "tags": [],
         "url": "/insights/canva-case-study/",
